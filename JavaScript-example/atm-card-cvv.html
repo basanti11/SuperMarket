@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+      var userDetails={
+        "Card":"9999444422221284",
+        "Cvv":"8672",
+        "Expiry":"2025",
+      }
+      function VerifyCard()
+      {
+        var card=document.getElementById("txtCard").value;
+        if(card==userDetails.Card)
+        {
+            document.getElementById("txtcvv").disabled=false;
+            document.getElementById("txtcvv").focus;
+        }
+      }
+      function VerifyCvv()
+      {
+        var cvv=document.getElementById("txtcvv").value;
+        if(cvv==userDetails.Cvv)
+        {
+            document.getElementById("lstYear").disabled=false;
+            document.getElementById("lstYear").focus;
+        }
+      }
+      function VerifyExpiry()
+      {
+        var year=document.getElementById("lstYear").value;
+        if(year==userDetails.Expiry)
+        {
+            document.querySelector("button").disabled=false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify Card</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" id="txtCard" onkeyup="VerifyCard()" maxlength="16"></dd>
+            <dt>Cvv</dt>
+            <dd><input type="text" id="txtcvv" disabled onkeyup="VerifyCvv()" size="4"></dd>
+            <dt>Expiry</dt>
+            <select disabled id="lstYear" disabled onchange="VerifyExpiry()">
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+            </select>
+        </dl>
+        <button disabled>Pay</button>
+    </fieldset>
+</body>
+</html>

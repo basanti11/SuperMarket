@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Limit</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script>
+        function AddClick()
+        {
+            "use strict";
+             const x=18;
+             const y=30;
+             var a=parseInt(document.getElementById("age").value);
+             if(a>=x && a<=y)
+             {
+                alert("You are eligible");
+             }
+             else{
+                alert("Not eligible")
+             }
+        }
+    </script>
+    <style>
+      .Agelimit
+      {
+        margin: 50px 200px 200px 400px;
+        border: 1px solid black;
+        height:200px;
+        width: 30%;
+      }
+
+    </style>
+</head>
+<body class="container-fluid d-flex">
+    <div class="Agelimit">
+        <label style="margin-left: 5px;">Age</label>
+        <input class="txt" type="text" id="age" style="margin: 5px 50px 0px 38px; width: 210px;"><br>
+        <!--label style="margin-left: 5px;"> Second Number</label>
+        <input class="txt" type="text" id="secondNum" style="margin: 5px 50px 0px 20px; width: 210px;"><br>
+        <div>
+        <input type="text" id="total" style="margin:8px 10px 0px 132px; width: 210px;"-->
+        </div>
+        <div style="margin: 58px 0px 0px -330px;">
+          <button onclick="AddClick()" id="btnSubmit" style=" width:100px;background-color: aquamarine; color: black;">Submit</button>
+
+        </div> 
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> 
+   </body>
+</html>

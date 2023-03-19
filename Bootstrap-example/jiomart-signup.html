@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiomart SignUp</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+        function Signup()
+        {
+            //var form=document.getElementById("fname");
+            var Name=document.getElementById("name").value;
+            var Email=document.getElementById("email").value;
+            var pass=document.getElementById("Pass").value;
+            var cpass=document.getElementById("cpass").value;
+            if(pass==cpass)
+            {
+                alert("Account Created Successfully");
+            }
+            else{
+                alert("Password did not match");
+            }
+        }
+    </script>
+    <style>
+        .form-signup
+        {
+            
+            border: 1px solid grey;
+            justify-content: center;
+            margin-top: 20px;
+             margin-left: 500px; 
+             margin-right: 500px; 
+             margin-bottom: 100px;
+             height: 400px;
+        }
+        .form
+        {
+            margin: 20px 500px 0px 500px;
+            border: 1px solid grey;
+            height: 340px;
+        }
+        header
+        {
+          height: 130px;
+          width: 100%;
+
+        }
+        .top-header
+        {
+          
+          justify-content: space-between;
+          display: flex;
+          color: white;
+          height: 60px;
+        }
+        footer
+        {
+          background-color: lightgray;
+        }
+        .top-footer
+        {
+          display: grid;
+          grid-template-columns: 4fr 4fr 4fr;
+          justify-content: center;
+          margin-left: 30px;
+          margin-right: 10px;
+          border-bottom: 0.5px solid grey;
+        }
+        .list-heading
+        {
+          padding-top: 40px;
+          color: black;
+          font-size: 15px;
+        }
+        .list
+        {
+          list-style: none;
+          font-size: 14px;
+          color: gray;
+        }
+        .bottom-footer
+        {
+           display: flex;
+           padding-top: 10px;
+        }
+
+    </style>
+</head>
+<body class="container-fluid">
+    <header class="container-fluid" style="position: sticky;">
+        <div class="top-header bg-primary w-100">
+         <div class="input-group w-75 ms-5">
+          <h5 class="pt-1 pe-3" style="font-size: 34px;">JioMart</h5>
+           <input type="text" class="form-control mt-2 mb-4 w-25" required placeholder=" Search essential Groceries and more..">
+           <button class="btn btn-warning mt-2 mb-4">
+              <span class="bo bi-search"></span>
+           </button>
+         </div>
+         <div class=" signin mt-2">
+              <button class="btn btn-primary" data-bs-target="#login" data-bs-toggle="modal"><span class="bi bi-person-fill">&nbsp; Sign in</span></button>
+       </div>
+         <div class=" cart mt-2 me-4">
+          <button class="btn btn-primary">
+            <span class="bi bi-cart pe-3" id="lblCount">&nbsp;Cart<span class="badge rounded rounded-circle position-absolute bg-danger"></span>
+            <!--span id="lblCount" class="badge position-absolute bg-danger rounded-circle"></span-->
+           </span>
+          </button>
+         </div>
+       </div>
+    </header>  
+    <div class="container-fluid">
+        <form class="form-signup" id="fname">
+        <!--div class="form"-->
+            <div class="mt-5">
+                <input type="text" class="form-control" required placeholder="Full Name" id="name">
+            </div>
+            <div class="mt-3">
+                <input type="text" class="form-control" required placeholder="Email-Id OR Mobile-No" id="email">
+            </div>
+            <div class="mt-3">
+                <input type="password" class="form-control" required placeholder="Password" id="Pass">
+            </div>
+            <div class="mt-3">
+                <input type="password" class="form-control" required placeholder="Confirm Password" id="Cpass">
+            </div>
+            <div>
+                <button class="btn btn-primary w-100 mt-3" onclick="Signup()">SignUp</button>
+            </div><!--/div-->
+        </form>
+    </div>
+    <footer>
+        <div class="top-footer">
+            <ul class="ulist">
+              <h5 class="list-heading">MOST POPULAR CATEGORIES</h5>
+              <li class="list">Staples</li>
+              <li class="list">Beverages</li>
+              <li class="list">Personal Care</li>
+              <li class="list">Home Care</li>
+              <li class="list">Fruits and Vegitables</li>
+              <li class="list">Baby Cares</li>
+              <li class="list">Snakes & Branded Foods</li>
+              <li class="list">Dairy & Bakery</li>
+            </ul>
+            <ul class="list">
+               <h5 class="list-heading">CUSTOMER SERVICES</h5>
+               <li class="list">About Us </li>
+               <li class="list">FAQ</li>
+               <li class="list">Terms and Conditions</li>
+               <li class="list">Privacy Policy</li>
+               <li class="list">E-waste Policy</li>
+               <li class="list">Canceliation and Return Policy</li>
+            </ul>
+            <ul class="list" style="margin-left: 45px; border-left: 1px solid gray;">
+               <h5 class="list-heading">CONTACT US</h5>
+               <li class="list">WhatsApp Us : <font color="blue">7003 7003</font></li><br>
+               <li class="list">Call Us : <font color="blue">1800-23487-984310</font><br>8:00AM to 8:00 PM 365 days</li><br>
+               <li class="list">Please note that you are accessing the <br>BETA Version of <font color="blue">jiomart.com</font></li><br>
+               <li class="list">Should you encounter any bugs, glitches,<br>
+                   lack of functionality, delayed deliveries, billing errors<br>
+                   or other problems on the beta website, please<br>
+                   email us on <font color="blue">cs@jiomart.com</font>
+               </li><br>
+               <!--div style="background-color: blue; margin-top: 28px;">
+                  <p>DOWNLOAD APP</p>
+                  <img src="./image/google-pay-img.JPG">
+               </div-->
+               <h5 class="list-heading">DOWNLOAD APP</h5><br>
+               <li class="list"> 
+                    <img src="./image/google-pay-img.JPG">
+               </li>
+           </ul>
+        </div>
+        <div class="bottom-footer">
+         <div style="margin-left: 150px;"><p>Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+, Google Chrome 80+</p></div>
+         <div style="margin-left: 80px;"><p>© 2022 All rights reserved. Reliance Retail Ltd.</p></div>
+       </div>
+     </footer>
+     
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

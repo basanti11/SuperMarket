@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI CALCULATOR</title>
+    <link rel="styleesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+    <script type="text/javascript">
+        function CalculateBMI()
+       {        
+      var Age=pareInt(document.getElementById("txtAge").value); 
+      var height=document.getElementById("txtHeight").value;
+      var weight=document.getElementById("txtWeight").value;
+      var bmi=weight/(height/100*height/100);
+     var total=bmi.toFixed(2);
+         if(total<18)
+          {
+            document.getElementById("result").innerHTML=`You are Underweight; ${total}`.fontcolor('green');
+            //document.getElementById("result").innerHTML=`Your are Underweight; ${Math.round(bmi)}`;
+
+          }
+          else if(total>=18 && total<25)
+          {
+            document.getElementById("result").innerHTML=`You are Normal; ${total}`.fontcolor('green');
+          }
+          else if(total>=25 && total<=30)
+          {
+            document.getElementById("result").innerHTML=`You are Overweight; ${total}`.fontcolor('green');
+          }
+          else if(total>30)
+          {
+            document.getElementById("result").innerHTML=`Yours Obesity; ${total}`.fontcolor('green');
+          }
+          else
+          {
+            document.getElementById("result").innerHTML=`Enter Valid Value`;
+          }
+        }
+        function bodyload()
+        {
+          CalculateBMI();
+        }
+       
+    </script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <!--form  style="margin-left: 500px; margin-top: 80px; background-color: grey; height: 500px; width: 500px;">
+      <div style="justify-content: center;">
+            <h3 style="font-size: 30px; color: green; padding-left: 120px; padding-top: 40px;">BMI CALCULATOR</h3>
+      </div>
+        <div>
+           <label style="margin-left: 50px; font-weight: bold;">Age</label>
+           <input style="margin-left: 78px; margin-top: 60px;" type="number" id="txtAge">
+        </div-->
+        <div>
+          <label style="margin-left: 50px; font-weight: bold;"> Weight</label>
+          <input style="margin-left: 58px; margin-top: 30px;" type="number" id="txtHeight" placeholder="Weight in KG">
+        </div>
+        <div>
+          <label style="margin-left: 50px; font-weight: bold;">Height</label> 
+         <input style="margin-left: 58px; margin-top: 30px;" type="number" id="txtWeight" placeholder=" Height in CM">
+
+        </div>
+        <!--div>
+          <label style="margin-left: 50px; font-weight: bold;">Gender</label>
+          <input style="margin-left: 60px; margin-top: 30px;" type="radio" value="Male" checked name="gender" id="male">Male
+          <input style="margin-left: 60px; margin-top: 30px;" type="radio" value="Female" checked name="gender" id="female">Female
+        </div-->
+        <div style="margin-left: 90px;"><button class="btn btn-primary ms-5 mt-4 w-50" onclick="CalculateBMI()">Calculate</button></div>
+        <!--h2 id="result" class="text-center"></h2-->
+        <div style="background-color: aqua; margin-top: 30px;">
+           <h4 id="result">wertyui</h4>
+        </div>
+      <!--/form-->
+      <script src="../node_modules/jquery/dist/jquery.js"></script>
+      <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

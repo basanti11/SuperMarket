@@ -1,0 +1,11 @@
+<script>
+        document.write(`
+         <h2>Your URL Location Details</h2>    
+         Your Server | IP address :  ${location.host}  <br>
+         Protocol                 :  ${location.protocol} - ${(location.protocol=="file:")?"You are accessing from File System - Please use Server":"You are using Local Server"} <br>
+         Port                     :  ${location.port} <br>
+         Href                     :  ${location.href} <br>
+         Path Name                :  ${location.pathname}
+    `);
+
+</script>

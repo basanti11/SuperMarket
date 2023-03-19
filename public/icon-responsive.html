@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon-Responsive</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+    <style>
+        ol
+        {
+           list-style: none;
+        }
+        li
+        {
+            width: fit-content;
+            padding: 5px;
+            border: 1px solid red;
+            background-color: red;
+            color: white;
+        }
+        @media screen and (min-width:700px)
+        {
+          ol
+          {
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        @media screen and (max-width:699px) 
+        {
+            ol 
+            {
+                display: flex;
+                flex-direction: column;
+                height: 200px;
+                justify-content: space-between;
+            }  
+            li span
+            {
+              display: none;
+              width: fit-content;
+            }
+            li
+            {
+                border-radius: 20px;
+            }
+            li:hover span
+            {
+                display: inline;
+            }
+            li:hover
+            {
+                width: 100px;
+                transition: 3s;
+            }
+        }
+    </style>
+</head>
+<body>
+     <ol>
+        <li class="bi bi-house"><span>Home</span></li> 
+        <li class="bi bi-bell"><span>Notification</span></li>
+        <li class="bi bi-envelope"><span>Mail</span></li>
+        <li class="bi bi-person"><span>Login</span></li>
+    </ol>
+</body>
+</html>

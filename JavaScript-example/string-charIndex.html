@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Char</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function VerifyName()
+        {
+            var username=document.getElementById("UserName").value;
+            var error=document.getElementById("error");
+            if(username.charCodeAt(0)>=65 && username.charCodeAt(0)<=90)
+            {
+              error.innerHTML="";
+            }
+            else
+            {
+                error.innerHTML="Name must start with Uppercase letter".fontcolor('blue');
+            }
+        }
+        function VerifyEmail()
+        {
+            var email=document.getElementById("Email").value;
+            var emailError=document.getElementById("emailError");
+            var atPos=email.indexOf("@");
+            var dotpos=email.lastIndexOf(".");
+            if(atPos<=2 || (dotpos-atPos)<2)
+            {
+                emailError.innerHTML="Invalid Email".fontcolor('red');
+            }
+            else
+            {
+                emailError.innerHTML="";
+            }
+            var domain=email.substring(email.indexOf("@")+1);
+            if(domain!="gmail.com")
+            {
+                emailError.innerHTML="Only Gmail is allowed".fontcolor("red");
+            }
+            else
+            {
+                emailError.innerHTML="";
+            }
+        }
+        function VerifyCard()
+        {
+            var card=document.getElementById("Card").value;
+            var cardPic=document.getElementById("cardPic");
+            if(card.startsWith("4455"))
+            {
+                cardPic.src="../public/images/mastercard.jpg"
+            }
+            else if(card.startsWith("5570"))
+            {
+                cardPic.src="../public/images/visacard.jpg";
+            }
+            else
+            {
+                cardPic.src="";
+                cardPic.alt="Invalid";
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+       <dt>User Name</dt>
+       <dd>
+          <input class="ms-5" type="text" onblur="VerifyName()" id="UserName">
+       </dd>
+       <dd id="error"></dd>
+       <dt>Email</dt>
+       <dd>
+          <input class="ms-5" type="text" onblur="VerifyEmail()" id="Email">
+       </dd>
+       <dd id="emailError"></dd>
+       <dt>Your Card Number</dt>
+       <dd class="input-group">
+          <input class="ms-5" type="text" onkeyup="VerifyCard()" id="Card">
+          <img id="cardPic" width="50" height="30">
+       </dd>
+    </dl>
+</body>
+</html>

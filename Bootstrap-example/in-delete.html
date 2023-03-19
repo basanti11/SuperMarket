@@ -1,0 +1,21 @@
+<script>
+    var product={
+        Name:"TV",
+        Price:45000.88
+    }
+    //delete product.Price;
+    if("Price" in product)
+    {
+        document.write(`Name=${product.Name}<br>Price=${product.Price}`);
+    }
+    else
+    {
+        document.write(`Name=${product.Name}`);
+    }
+</script>
+
+<!--script>
+    delete Math.PI;
+    var pi=Math.PI;
+    document.write(pi);
+</script-->

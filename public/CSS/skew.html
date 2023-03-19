@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skew</title>
+    <style>
+        .container div
+        {
+           align-items: center;
+           justify-content: center;
+           margin: auto;
+           width: 300px;
+           margin-top: 200px;
+        }
+        img
+        {
+          margin-left: 10px;
+          transition: 2s;
+          height: 300px;
+          width: 300px;
+        }
+        img:hover
+        {
+            /*transform: skew(30deg);*/
+            /*transform: skew(-20deg);*/
+            transform: skew(20deg,30deg);
+            transition: 2s;
+        }
+        .container1 div
+        {
+          align-items: center;
+          justify-content: center;
+          margin: auto;
+          width: 300px;
+          margin-top: 200px;
+        }
+        .img1
+        {
+            margin-left: 10px;
+            transition: 2s;
+            height: 300px;
+            width: 300px;
+        }
+        .img1:hover
+        {
+            transform: rotate(-180deg);
+            transition: 2s;
+        }
+        .container2
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+        .img2
+        {
+           
+            margin-left: 10px;
+            transition: 2s;
+            height: 100px;
+            width: 100px; 
+        }
+        .img2:hover
+        {
+            transition: 2s;
+            transform: matrix(2,-1,-2,2,200,100);
+        }
+        .container3
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            border: 1px solid black;
+            background-color: aquamarine;
+        }
+        .img3
+        {
+            width: 200px;
+            height: 200px;
+            transition: 2s;
+            margin: 50px 90px 0px 0px;
+
+        }
+        .img3:hover
+        {
+            transform: scale3d(2,2,2);
+            box-shadow: 10px 8px 2px gray;
+            transition: 2s;
+            z-index: 1;
+        }
+        .box
+        {
+            width: 50px;
+            background-color: red;
+            height: 50px;
+            transition-duration: 2s;
+            transition-property: width;
+
+        }
+        .box:hover
+        {
+            width: 1000px;
+            background-color: yellow;
+            transition-duration: 4s;
+            transition-property: width;
+             transition-delay: 2s;
+             transition-timing-function: steps(10);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <img src="../public/images/netflixlaptop.JPG">
+        </div>
+    </div>
+    <div class="container1">
+        <div>
+            <h1>ROTATED EXAMPLE</h1>
+            <img class="img1" src="../public/images/shoes.jpg">
+        </div>
+    </div>
+    <div class="container2">
+        <div>
+            <h1>Matrix Example</h1>
+            <img class="img2" src="../public/images/wrist watch.jpg">
+        </div>
+    </div>
+    <div class="container3">
+        <h1>CSS 3D Transform with marquee</h1>
+       <marquee scrollamount="15" onmouseover="this.stop" onmouseout="this.start">
+           <img class="img3" src="../public/images/shoess.jpg">
+           <img class="img3" src="../public/images/wrist watch.jpg">
+           <img class="img3" src="../public/images/women sweater.jpg">
+       </marquee>
+    </div>
+    <div class="box">
+        
+    </div>
+</body>
+</html>

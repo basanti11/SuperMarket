@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN Limit</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+       var userDetails={
+        "PinNo":"8765"
+       }
+        var count=0;
+       function SubmitClick()
+       {
+        var pin=document.getElementById("txtPin").value;
+        if(pin==userDetails.PinNo)
+        {
+            document.write("Login Successful")
+        }
+        else if(txtPin.count<=3)
+        {
+            document.getElementById("msg").innerHTML=`You have 2 attempt :${Invalid}`.fontcolor('red');
+            count++;
+        }
+        else
+        {
+            //document.getElementById("msg").innerHTML=`Card blocked`;
+            msg.innerHTML=`Card blocked`.fontcolor('red');
+        }
+        
+        
+       }
+    </script>
+</head>
+<body class="container-fluid">
+    <form style="margin-top:150px; margin-left:450px; height: 300px; width: 350px; border: 1px solid grey;">
+        <div class="mt-5">
+           <label style="margin-left: 105px;" id="lblPIN">Enter PIN No</label>
+        </div>
+        <div class="mt-3">
+            <input type="text" class="form-control w-75 ms-5" id="txtPin">
+        </div>
+        <div style="margin-left: 40px;">
+            <button class="btn btn-primary w-50 ms-5 mt-3" onclick="SubmitClick()">Submit</button>
+        </div>
+        <div>
+           <h1 id="msg"></h1>
+        </div>
+   </form>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

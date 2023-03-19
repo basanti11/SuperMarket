@@ -1,0 +1,13 @@
+<script>
+    var categories=["Electronics","Footwear","Fashion","Sneakers"];
+    categories.push("Kids Fashion","Men's Fashion");
+    //categories.unshift("Watches")
+    //categories.splice(3,0,"Shoes","Sandles");
+    //categories.reverse();
+    categories.pop(); /*remove last index item*/
+    //categories.shift(); /*remove first index item*/
+    for(var property in categories)
+    {
+        document.write(`[${property}]-${categories[property]}<br>`);
+    }
+</script>

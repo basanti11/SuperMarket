@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormEvent</title>
+    <script>
+        function SubmitToServer(obj)
+        {
+          for(var property of obj.elements)
+          {
+            document.write(property.value+"<br>")
+          }
+        }
+        function CityChanged()
+        {
+            frmLogin.submit();
+        }
+    </script>
+</head>
+<body>
+    <form name="frmLogin" onsubmit="SubmitToServer(this)" onreset="alert('Form will reset')">
+      <h2>User Login</h2>
+      <dl>
+        <dt>User Id</dt>
+        <dd>
+            <input type="text" name="UserId">
+        </dd>
+        <dt>Password</dt>
+        <dd><input type="password" name="password"></dd>
+        <dt>City</dt>
+        <dd>
+            <select name="City" onchange="CityChanged()">
+               <option value="Delhi">Delhi</option>
+               <option value="Hyd">Hyd</option>
+            </select>
+        </dd>
+      </dl>
+      <button type="submit">Login</button>
+      <button type="reset">Cancel</button>
+    </form>
+</body>
+</html>

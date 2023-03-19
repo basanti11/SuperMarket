@@ -1,0 +1,38 @@
+<script>
+    class TV
+    {
+        Name="Samsung TV";
+        Price=56000.55;
+        Print()
+        {
+            document.write(`Name=${this.Name}<br>Price=${this.Price}<br>`)
+        }
+    }
+
+    class Watch
+    {
+        Stock=true;
+        Print()
+        {
+            var obj=new TV();
+            obj.Name="Fastrack Watch";
+            obj.Price=3400.44;
+            obj.Print();
+            document.write(`Stock=${(this.Stock==true)?"Available":"Out of Stock"}`);
+        }
+    }
+    var product=prompt("Enter Product Name", "TV|Watch");
+    if(product=="TV")
+    {
+        let obj=new TV();
+        obj.Print();
+    }
+    else if(product=="Watch")
+    {
+        let obj= new Watch();
+        obj.Print();
+    }
+    else{
+        alert("Please Enter T or Watch")
+    }
+</script>

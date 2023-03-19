@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match</title>
+    <script type="text/javascript">
+        var pattern=/ /;
+        var tip=" ";
+        function CountryChange()
+        {
+            var country=document.getElementById("Country").value;
+            var flag=document.getElementById("flag");
+            var mobile=document.getElementById("Mobile");
+            var btnSubmit=document.getElementById("btnSubmit");
+            if(country=="India")
+            {
+                
+            flag.src="../public/images/flagindia.jpg";
+            mobile.placeholder="eg: +91 10 digits";
+            pattern=/\+91\d{10}/;
+            tip="eg: +91 10 digits";
+            //btnSubmit.disabled=false;
+            }
+         
+            else if(country=="US")
+            {
+              flag.src="../public/images/flagUsa.jpg";
+              mobile.placeholder="eg: +(1) (425) 555-0100 ";
+             pattern=/\+\(1\)\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{4}/;
+              tip="eg: +(1)(425) 555-0100 ";
+            }
+            //else if(country=="UK")
+           // {
+            /*flag.src="../public/images/UKFlag.jpg";
+            mobile.placeholder="eg: +(44) (20) 1456 8502";
+            pattern=/\+(44\)\s\([0-9]{2}\)\s[0-9]{4}\s[0-9]{4}/;
+            tip="eg: +(44)(20) 1456 8502";
+           }*/
+           else
+           {
+            flag.src="";
+            flag.alt="Select Country";
+            mobile.placeholder="Please Select a Country";
+        
+           }
+        }
+        function SubmitClick()
+        {
+            var mobile=document.getElementById("Mobile").value;
+            var msg=document.getElementById("msg");
+            if(mobile.match(pattern))
+            {
+                document.write(`Verified successfully...OTP sent to ${mobile}`);
+            }
+            else
+            {
+                msg.innerHTML=`Invalid Mobile :${tip}`.fontcolor('red');
+            }
+        }
+    </script>
+    <style>
+        #flag
+        {
+            position: absolute;
+            top: 50px;
+            right: 1500px;
+            border-radius: 200px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify Mobile</legend>
+         <dl>
+             <dt>Select Your Country <img width="80" id="flag" height="50"></dt>
+               <dd>
+                  <select id="Country" onchange="CountryChange()">
+                       <option>Select Country</option>
+                       <option>India</option>
+                       <option>US</option>
+                       <option>UK</option>
+                  </select>
+               </dd>
+               <dt>Mobile</dt>
+               <dd>
+                 <input type="text" id="Mobile">
+               </dd>
+         </dl>
+           <button id="btnSubmit" onclick="SubmitClick()">Submit</button>
+    </fieldset>
+    <h1 align="center" id="msg"></h1>
+</body>
+</html>

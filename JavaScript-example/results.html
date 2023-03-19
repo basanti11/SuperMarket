@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <script>
+        var topics=[
+            {
+                title:"JavaScript", Description:"It is a language for handling DOM in HTML"
+            },
+            {title:"CSS", Description:"It defines styles for HTML"}]
+
+            function bodyload()
+            {
+                var queryString=location.search;
+                var item=queryString.substring(queryString.indexOf("=")+1);
+                var result=topics.find(item=>item.title==term)
+                document.queryString("p").innerHTML=result.Description;
+            }
+     </script>
+    </head>
+<body onload="bodyload()">
+    <h2>Results</h2>
+    <p></p>
+</body>
+</html>

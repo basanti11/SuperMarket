@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add two number</title>
+    
+    <script type="text/javascript">
+      function AddClick()
+      {
+        "use strict"
+        var sum;
+        var firstnum=parseInt(document.getElementById("firstNum").value);
+        var secondnum=parseInt(document.getElementById("secondNum").value);
+        if(firstnum>=0 && secondnum>=0)
+        { sum=firstnum+secondnum;
+           //alert(sum);
+          document.getElementById("total").value=sum;
+        }
+           else
+           alert("Value not acceptable")
+       }
+      
+    </script>
+    <style>
+      .Addition
+      {
+        margin: 50px 200px 200px 400px;
+        border: 1px solid black;
+        height: 100px;
+        width: 30%;
+      }
+    </style>
+</head>
+<body class="container-fluid" style="display: flex;">
+     <!--div>
+         <label>First Number</label>
+         <input type="text" id="firstNum">
+         <label> Second Number</label>  
+         <input type="text" id="secondNum">
+         <input type="text" id="total">
+        <button onclick="AddClick()" id="btnAdd">ADD</button>
+      </div-->
+       <div class="Addition">
+          <label style="margin-left: 5px;">First Number</label>
+          <input class="txt" type="text" id="firstNum" style="margin: 5px 50px 0px 38px; width: 210px;"><br>
+          <label style="margin-left: 5px;"> Second Number</label>
+          <input class="txt" type="text" id="secondNum" style="margin: 5px 50px 0px 20px; width: 210px;"><br>
+          <div>
+          <input type="text" id="total" style="margin:8px 10px 0px 132px; width: 210px;">
+          </div>
+          <div style="margin: -20px 0px 0px 10px;">
+            <button onclick="AddClick()" id="btnAdd" style=" width:100px;background-color: aquamarine; color: black;">ADD</button>
+
+          </div> 
+      </div> 
+     
+</body>
+</html>

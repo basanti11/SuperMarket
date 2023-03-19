@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="dtylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        #rating
+        {
+            width: 100px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid gray;
+            position: absolute;
+            top: 100px;
+            right: 150px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #describe
+        {
+            width: 200px;
+            height: 250px;
+            box-shadow: 2px 2px 2px gray;
+            overflow: auto;
+            text-align: justify;
+            position: absolute;
+            top: 150px;
+            right: 100px;
+            padding: 15px;
+        }
+    </style>
+    <script type="text/javascript">
+       function LoadProduct(id)
+       {
+        fetch(`http://fakestoreapi.com/products/${id}`)
+        .then(function(response)
+        {return response.json();})
+        .then(function(product)
+        {
+            document.getElementById("lblTitle").innerHTML=product.title;
+            document.getElementById("imgProduct").innerHTML=product.image;
+            document.getElementById("lblPrice").innerHTML="$" + product.price;
+            document.getElementById("rating").innerHTML=`<span class="bi bi-star-fill text-success"></span>
+            ${product.rating.rate}`
+
+            document.getElementById("describe").innerHTML=product.description;
+        })
+       }
+
+       function bodyload()
+       {
+          LoadProduct(1);
+       }
+       var count=1;
+       function NextClick()
+       {
+        count++;
+        LoadProduct(count);
+       }
+
+       function PreClick()
+       {
+        count--;
+        LoadProduct(count);
+       }
+    </script>
+</head>
+<body class="container-fluid d-flex justify-content-center" onload="bodyload()">
+    <div class="card m-4 w-50">
+        <div class="card-header text-center">
+            <p id="lblTitle"></p>
+        </div>
+        <div class="card-body text-center">
+            <img id="imgProduct" width="90%" height="300">
+            <h2 id="lblPrice"></h2>
+        </div>
+        <div class="card-footer text-center">
+            <button class="btn btn-danger" onclick="PreClick()">
+            <span class="bi bi-arrow-left"></span>
+            </button>
+            <button class="btn btn-danger" onclick="NextClick()">
+             <span class="bi bi-arrow-right"></span>
+            </button>
+        </div>
+    </div>
+    <div id="rating">
+
+    </div>
+    <div id="describe">
+
+    </div>
+</body>
+</html>

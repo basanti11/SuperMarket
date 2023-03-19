@@ -1,0 +1,28 @@
+<!--script>
+    var categories=["Electronics","Footwear","Fashion",];
+    document.write(categories.toString()+"<br>");
+    document.write(categories.join(">>")+"<br>");
+    document.write(categories.slice(1,2)+"<br>");
+</script-->
+
+<script>
+   var categories=["Electronics","Footwear","Fashion",];
+   categories.map(function(category)
+   {
+    document.write(`<div><button>${category}</button></div>`);
+   });
+   categories.map(function(category)
+   {
+    document.write(`<h2>${category}</h2>`)
+   });
+   var sales=[49098, 56980, 45000, 34980,67000,42000];
+   /*var  result=sales.filter(function(item)
+   {
+    return item<45000; // filter return all value which are less than than given condition
+   });*/
+   var  result=sales.find(function(item)  // find return only first occurence of value or if find any numer which is less than given condition then give result and will not read further and stop
+   {
+    return item<45000;
+   });
+   document.write(result);
+</script>

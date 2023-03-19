@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket</title>
+    <style type="text/css" media="screen">
+       @media screen and(orientation:landscape)
+       {
+          .ticket
+          {
+            display: flex;
+          }
+       }
+        .ticket
+        {
+            text-align: center;
+        }
+        body
+        {
+            display: flex;
+            justify-content: center;
+        }
+        button
+        {
+          margin-top: 20px;
+        }
+        table
+        {
+            background-color: aquamarine;
+        }
+    </style>
+    <style type="text/css" media="print">
+      .ticket
+      {
+        text-align: center;
+      }
+      body
+      {
+        display: flex;
+        justify-content: center;
+      }
+      button
+      {
+        display: none;
+      }
+      table
+      {
+        background-color: none;
+      }
+      h1{
+        display: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="ticket">
+        <h1>Your Ticket</h1>
+        <table border="1" width="200">
+        <tr>
+            <td>Name</td>
+            <td>Nimita</td>
+        </tr>
+        <tr>
+            <td>Depature</td>
+            <td>12:30pm</td>
+        </tr>
+        <tr>
+            <td>Boarding At</td>
+            <td>Sec</td>
+        </tr>
+        </table>
+        <button onclick="window.print()">Print Ticket</button>
+    </div>
+</body>
+</html>

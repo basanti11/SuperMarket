@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+    </style>
+    <script>
+        function bodyload()
+        {
+            setInterval(function()
+            {
+                var now=new Date();
+                document.querySelector("h1").innerHTML=now.toLocaleTimeString();
+            },1000)
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+     <div>
+        <h1></h1>
+     </div>
+</body>
+</html>

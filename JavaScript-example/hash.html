@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash</title>
+    <script>
+        function GetClick(){
+            var list = "";
+            var date = new Date();
+            switch(location.hash){
+                case "#html":
+                 list+="HTML Tutorial-" + date.toLocaleString() + "<br>";
+                 break;
+                 case "#css":
+                 list+="CSS Tutorial-" + date.toLocaleString() + "<br>";
+                 break;
+                 case "#js":
+                 list+="JavaScript Tutorial-" + date.toLocaleString() + "<br>";
+                 break;
+                 case "#jq":
+                 list+="Jquery Tutorial-" + date.toLocaleString() + "<br>";
+                 break;
+            }
+            document.getElementById("topic").innerHTML += list;
+        }
+    </script>
+
+</head>
+<body>
+    <h1 id="mainHeading">Web Technologies</h1>
+    <ol>
+        <li><a href="#html">HTML Tutorial</a></li>
+        <li><a href="#css">CSS Example</a></li>
+        <li><a href="#javascript">JavaScript</a></li>
+        <li><a href="#jq">Java Query</a></li>
+    </ol>
+    <div>
+       <h5>Recently Watched<button onclick="GetClick()">Get</button></h5>
+       <p id="topic"></p>
+    </div>
+       <p>Depending on how <span>40% Offer on <a href="#bag">Bags</a></span> you obtained the Windows software, this is a license agreement
+          <div align="center">
+            <a href="#mainHeading">Back to Top</a>
+        </div>
+    
+</body>
+</html>

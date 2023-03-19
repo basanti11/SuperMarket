@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+     <script>
+        var userDetails={
+            "Email":"john_nit@gmail.com",
+            "Mobile":"+919876543212",
+            "Password":"john@123"
+        };
+        var flag="";
+        function ContinueClick()
+        {
+            var userid=document.getElementById("txtUserId").value;
+            var idContainer=document.getElementById("idContainer");
+            var pwdContainer=document.getElementById("pwdContainer");
+
+            if(userid==userDetails.Email)
+            {
+                flag=`Login Success and OTP Sent to your email ${userid}`;
+                idContainer.style.display="none";
+                pwdContainer.style.display="block";
+            }
+            else if(userid==userDetails.Mobile)
+            {
+                flag=`Login Success and OTP Sent to your mobile ${userid}`;
+                idContainer.style.display="none";
+                pwdContainer.style.display="block";
+            }
+            else
+            {
+                document.getElementById("userError").innerHTML=`${userid} does not exist`;
+            }
+        }
+        function PasswordClick()
+        {
+            var password=document.getElementById("txtPassword").value;
+            if(password==userDetails.Password)
+            {
+                document.write(`<h2>${flag}</h2>`);
+            }
+            else
+            {
+                document.getElementById("txtError").innerHTML="Invalid Password";
+            }
+
+        }
+     </script>
+</head>
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center" style="height: 500px;">
+        <div>
+            <div id="idContainer">
+                <div>
+                    <label class="form-label">
+                       <b>Email or Mobile phone number</b>
+                    </label>
+                    <div>
+                        <input type="text" id="txtUserId" class="form-control">
+                    </div>
+                    <div class="text-danger"></div>
+                </div>
+                <div class="mt-2">
+                   <button onclick="ContinueClick()" class="btn btn-warning w-100">Continue</button>
+                </div>
+            </div>
+            <div id="pwdContainer" style="display: none;">
+                 <div>
+                    <label class="form-label"><b>Password</b></label>
+                    <div>
+                        <input type="password" id="txtPassword" class="form-control">
+                    </div>
+                    <div id="pwdError" class="text-danger"></div>
+                 </div>
+                 <div class="mt-2">
+                    <button onclick="PasswordClick()" class="btn btn-warning w-100">Login</button>
+                 </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

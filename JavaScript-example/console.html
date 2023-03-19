@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+    <script type="text/javascript">
+       function DeleteClick()
+       {
+          console.log("Delete Button Clocked");
+          flag=confirm("Delete Record\nRecord will be deleted\nAre you sure?");
+          if(flag==true)
+           {
+            console.error("OK Clicked");
+            document.querySelector("p").outerHTML="<h2><font color='blue'>Record Deleted Successfully...</font></h2>";
+           }
+           else
+           {
+            console.warn("Cancel Clicked");
+             document.querySelector("p").innerText="You Canceled...";
+        }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+     <p align="center"></p>
+
+</body>
+</html>

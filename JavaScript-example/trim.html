@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trim</title>
+    <script type="text/javascript">
+       function SubmitClick()
+       {
+         var userid=document.getElementById("UserId").value;
+         if(userid.trim()=="john_nit")
+         //if(userid=="john_nit")
+         {
+            document.write("Login Success..");
+         }
+         else
+         {
+            alert("Invalid User Id");
+         }
+       }
+    </script>
+</head>
+<body>
+    User Id: <input type="text" id="UserId">
+    <button onclick="SubmitClick()">Submit</button>
+</body>
+</html>

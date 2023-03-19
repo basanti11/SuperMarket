@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Text-2D</title>
+    <style>
+        .space
+        {
+            height: 500;
+            width: 100%;
+        }
+        .para1
+        {
+            width: 500px;
+            height: 500px;
+            text-align: justify;
+            letter-spacing: 20px;
+        }
+        p
+        {
+          width: 350px;
+          border: 1px solid black;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        ul
+        {
+          list-style-type: lower-alpha;
+          /*list-style-position: outside;*/
+          list-style-position: inside;
+        }
+        li
+        {
+            border: 1px solid black;
+            padding: 2px;
+            width: 200px;
+        }
+        img
+        {
+          margin-left: 0px;
+          transition: 5s;
+        }
+        img:hover
+        {
+            /*transform: translateX(800px);
+            transition: 3s;*/
+            /*-webkit-transform: translate(800px);
+            -moz-transform: translate(800px);
+            -o-transform: translate(800px);
+            -ms-transform: translate(800px);*/
+           /* transform: translateY(800px);
+            transition: 3s;*/
+            transform: translate(300px,400px);
+            transition: 3s;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        The Supreme Court has sought the Government’s response to appeals to allow same-sex marriage under a special
+        ,in another bid to provide legal sanction to widening social customs. A Bench of CJI D.Y. Chandrachud and
+        Justice Hima Kohli agreed to hear two partners who said the non-recognition of same-sex marriage amounted to
+        discrimination that struck at the rights of LGBTQIA+ couples. The petitioners cited the Special Marriage Act,
+        1954, which provides a civil marriage for couples who cannot marry under their personal law. Listing the case
+        for hearing, the Court also transferred cases pending before several High Courts to itself. It is a first step
+        towards same-sex marriage, which has been legalised in 30-odd countries, including the U.S. where this July
+        the House of Representatives approved legislation to protect such marriages. This legislative action came amidst 
+        concern that an aggressive Supreme Court could revisit settled laws after it overturned Roe vs Wade on abortion
+        rights. After the K.S. Puttaswamy verdict (2017) which upheld the right to privacy and Navtej Singh Johar 
+        (2018) that decriminalised homosexuality, there was hope that same-sex marriages would follow, but that has
+        not been the case. At depositions in courts and outside, the Centre has opposed same-sex marriage, and said
+        judicial interference will cause “complete havoc with the delicate balance of personal laws”.
+    </p>
+    <!----------CSS LIST STYLE START---------------------------->
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+    <!---------------------CSS 2D TRANSFORM------------->
+    <div>
+        <h1>CSS 2D Transform</h1>
+        <img src="../public/images/shoes.jpg" width="100" height="100">
+    </div>
+</body>
+</html>

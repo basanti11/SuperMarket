@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML InnerText</title>
+    <script type="text/javascript">
+       function DeleteClick()
+       {
+        flag=confirm("Delete Record\nRecord will be deleted\nAre you sure?")
+         if(flag==true)
+         {
+           //document.querySelector("p").innerHTML ="<h2><font color='red'>Record Delete Successfully..</font></h2>"
+
+          document.querySelector("p").outerHTML ="<h2><font color='red'>Record Delete Successfully..</font></h2>" 
+         }
+         else
+         {
+           document.querySelector("p").innerText="You Canceled";
+         }  
+       }
+      /*function innerHTML()
+       {
+          var x =document.getElementById('test').innerHTML;
+       }
+       function innerText()
+       {
+        var x =document.getElementById('test').innerText;
+       }*/
+      </script>
+</head>
+<body>
+    <button onclick="DeleteClick()">Delete</button>
+     <p align="center"></p>
+
+
+     <!--div id="test">The following elements
+        <code></code>
+        <italic></italic>
+     </div>
+     <button onclick="innerHTML()">innerHTML</button>
+     <button onclick="innerText()">innerText</button-->
+</body>
+</html>

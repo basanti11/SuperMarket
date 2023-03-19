@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icon/fonts/bootstrap-icon.css">
+    <title>Mouse-Hover</title>
+    <style>
+        h1
+        {
+            width: 100px;
+        }
+        h1:active
+        {
+            text-decoration: underline;
+            width: 600px;
+            transition: 10s;
+        }
+        img{
+            transition: 4s;
+        }
+        img:active
+        {
+            width: 200px;
+            height: 200px;
+            transition: 2s;
+        }
+        a:link
+        {
+            text-decoration: none;
+            color: green;
+        }
+        a:visited
+        {
+            color:gray;
+        }
+        a:active
+        {
+            color: red;
+        }#UserName:read-only
+        {
+          cursor: not-allowed;
+        }
+        button:disabled
+        {
+          cursor:not-allowed;
+          background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Press hold the mouse button</h1>
+    <img src="images/1st img.webp">
+    <a href="../group.html">Group</a>|<a href="http//www.ebay.in">Ebay</a>
+    User Name:<input type="text" id="UserName" value="John" readonly>
+    <button disabled>Submit</button>
+</body>
+</html>

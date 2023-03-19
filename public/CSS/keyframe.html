@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe</title>
+    <style>
+        @keyframes SlidIn
+        {
+            from
+            {
+                margin-left: 120%;
+                width: 10px;
+                height: 10px;
+                transform: rotate(360deg);
+                opacity: 0;
+            }
+            50%
+            {
+                transform: rotate(-180deg);
+            }
+            to
+            {
+                margin-left:0%;
+                width:100%;
+                height:100%;
+                tranform:rotate(0deg);
+                opacity: 1;
+            }
+        }
+        @keyframes ZoomIn
+        {
+            from
+            {
+                font-size: 5px;
+            }
+            to
+            {
+                font-size: 100px;
+            }
+        }
+        body
+        {
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+           overflow: hidden;
+            display: flex;
+        }
+        h1
+        {
+          animation-name: ZoomIn;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+        img 
+        {
+            height: 300px;
+            width: 300px;
+          animation-name: SlidIn;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Kids's Clothing</h1>
+        <img src="../public/images/wrist watch.jpg" height="300" width="300">
+    </div>
+</body>
+</html>

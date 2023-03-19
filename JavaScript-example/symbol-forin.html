@@ -1,0 +1,29 @@
+<!--script>
+    var id=Symbol();
+    var tv={
+        [Id]:1,
+        Name:"Samsung TV",
+        Price:45600.44,
+        Stock:true
+    }
+    for(var property in tv)
+    {
+        document.write(property +"<br>");
+    }
+    document.write("Product Id=" +tv(Id));
+</script-->
+<script>
+    var Id=Symbol();
+    var tv={
+        [Id]:1,
+        Name:"Samsung TV",
+        Price:45600.98,
+        Stock:true,
+        Rating:{Rate:2.4, Count:4500}
+        }
+        for(var property in tv)
+        {
+            document.write(`${property}: ${tv[property]}(${typeof tv[property]})<br>`); //typeof will show the data type variable
+        }
+        document.write("Product Id=" + tv[Id]);
+</script>

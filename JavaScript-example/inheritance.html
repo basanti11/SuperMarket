@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance</title>
+    <script>
+        class HdfcBank_Version1
+        {
+           Personal = "Personal Banking Service";
+           NRI = "Nri Banking Services"
+           Print(){
+               document.write(`${this.Personal}<br>${this.NRI}<br>`);
+           }
+        }
+        class HdfcBank_Version2 extends HdfcBank_Version1
+        {
+           Loans = "Personal and Vehical Loans";
+           Print(){
+               super.Print();
+               document.write(`${this.Loans}<br>`);
+           }
+        }
+        class HdfcBank_Version3 extends HdfcBank_Version2
+        {
+           AGRI = "Govt. Bank Schemes";
+           Print(){
+               super.Print();
+               document.write(`${this.AGRI}<br>`);
+           }
+        }
+        function InstallClick(){
+           var version = document.getElementById("version").value;
+           document.write(`<h2>You Installed ${version} of HDFC</h2>`);
+           switch(version)
+           {
+               case "Version-1":
+               let obj1 = new HdfcBank_Version1();
+               obj1.Print();
+               break;
+               case "Version-2":
+               let obj2 = new HdfcBank_Version2();
+               obj2.Print();
+               break;
+               case "Version-3":
+               let obj3 = new HdfcBank_Version3();
+               obj3.Print();
+               break;
+           }
+        }
+   </script>
+
+</head>
+<body>
+    <dl>
+        <h3>HDFC Bank App</h3>
+        <dt>Select Version</dt>
+        <dd>
+            <select id="version">
+                <option>Version-1</option>
+                <option>Version-2</option>
+                <option>Version-3</option>
+            </select>
+            <button onclick="InstallClick()">Install</button>
+        </dd>
+    </dl>
+
+</body>
+</html>

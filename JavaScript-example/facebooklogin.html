@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script type="text/javascript">
+        function LoginClick()
+        {
+            var username=document.getElementById("userName").value;
+            //var nameError=document.getElementById("nameError");
+            var userpass=document.getElementById("userPass").value;
+            //var passError=document.getElementById("passError");
+            var msg=document.getElementById("msg");
+            if(username=="")
+            {
+              msg.innerHTML="User Name Required *".fontcolor('red');
+
+            }
+            else if(userpass="")
+            {
+              msg.innerHTML=`Password Required *`.fontcolor('red');
+
+            }
+            else
+            {
+              msg.innerHTML=`Login Successfull`;
+            }
+        }
+    </script>
+</head>
+<body class="container-fluid">
+   <div> 
+     <form class="justify-content-center mt-5 ms-5">
+           <dl>
+               <dt>Login in Facebook</dt>
+               <dd>
+                  <input type="text" id="userName">
+               </dd>
+               <!--dd id="nameError"></dd-->
+
+               <dd>
+                  <input type="text" id="userPass">
+               </dd>
+           </dl>
+           <button class="btn btn-primary" id="btnLogin" onclick="LoginClick()">Login</button>
+           <h1 align="center" id="msg"></h1>
+
+     </form>
+  </div>
+</body>
+</html>

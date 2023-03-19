@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Presenting UI</title>
+    <script type="text/javascript">
+        var categories=["All","Electronics" , "Footwear" , "Fashion"];
+       function bodyload()
+       {
+         for(var item of categories)
+         {
+            var li=document.createElement("li");
+            li.innerHTML=item;
+            document.querySelector("ol").appendChild(li);
+
+
+            var ulLi=document.createElement("li");
+            //li.innerHTML=`<input type="checkbox" value=${item}>${item}`;
+            li.innerHTML=`<input type="checkbox" value= ${item}> ${item}`;
+            document.querySelector("ul").appendChild(ulLi);
+
+
+            var option=document.createElement("option");
+            option.text=item;
+            option.value=item;
+            document.querySelector("select").appendChild(option);
+
+            var div=document.createElement("div");
+            var anchor=document.createElement("a");
+            anchor.href="#";
+            anchor.innerHTML=item;
+            //document.querySelector("nav").appendChild(anchor);
+            div.appendChild(anchor);
+            document.querySelector("nav").appendChild(div);
+
+
+            var tr=document.createElement("tr");
+            var td=document.createElement("td");
+            td.innerHTML=item;
+            tr.appendChild(td);
+            document.querySelector("tbody").appendChild(tr);    
+         }
+       }
+    </script>
+</head>
+<body onload="bodyload()">
+    <h3>Categories List</h3>
+    <ol>
+
+    </ol>
+    <h3>Checkbox List</h3>
+      <ul>
+
+      </ul>
+    <h3>Select Category</h3>
+    <select>
+
+    </select>
+    <h3>navbar</h3>
+    <nav>
+
+    </nav>
+    <h3>Table</h3>
+    <table width="400" border="2">
+       <thead>
+          <tr>
+             <th>Category</th>
+          </tr>
+       </thead>
+       <tbody>
+         
+       </tbody>
+    </table>
+</body>
+</html>

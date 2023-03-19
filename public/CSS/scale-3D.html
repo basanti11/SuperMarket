@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scale-3D</title>
+    <style>
+        .container
+        {
+            width: 500px;
+            height: 300px;
+            border: 5px solid darkcyan;
+            background-color: darkgray;
+            margin: 20px;
+        }
+        img
+        {
+           width: 200px;
+           height: 200px;
+           border: 1px dotted darkcyan;
+           opacity: 0.8;
+           margin: 20px 60px 0px 0px;
+        }
+        .transform-effect
+        {
+            transform: scale3d(1,1,1);
+            transition: 2s;
+        }
+        .transform-effect:hover
+        {
+            transform: scale3d(1.5,1.5,1.5);
+            transition: 2s;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <marquee scrollamount="10" onmouseover="this.stop()" onmouseout="this.start()">
+            <img class="transform-effect" src="../CSS/image/flower.jpg">
+            <img class="transform-effect" src="../CSS/image/deer.jpg">
+            <img class="transform-effect" src="../CSS/image/nature.jpg">
+            <img class="transform-effect" src="../CSS/image/sky.jpg">
+        </marquee>
+   
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atm Card CVV Check</title>
+    <style>
+        input:read-only
+        {
+            background-color: lightgrey;
+        }
+    </style>
+    <script type="text/javascript">
+        var userDetails={
+          "Card":"9999444422221284",
+          "Cvv":"8672",
+          "Expiry":"2025",
+        }
+        /*function VerifyCard()
+        {
+          var card=document.getElementById("txtCard").value;
+          if(card==userDetails.Card)
+          {
+              document.getElementById("txtcvv").disabled=false;
+              document.getElementById("txtcvv").focus();
+              document.querySelector("h1").innerHTML="";
+          }
+          else
+          {
+              document.querySelector("button").disabled=true;
+              document.querySelector("h1").innerHTML="Invalid Card".fontcolor('red');
+          }
+        }
+        function VerifyCvv()
+        {
+          var cvv=document.getElementById("txtcvv").value;
+          if(cvv==userDetails.Cvv)
+          {
+              document.getElementById("lstYear").disabled=false;
+              document.getElementById("lstYear").focus();
+          }
+        }
+        function VerifyExpiry()
+        {
+          var year=document.getElementById("lstYear").value;
+          if(year==userDetails.Expiry)
+          {
+              document.querySelector("button").disabled=false;
+          }
+        }*/
+
+        function PayClick()
+        {
+            var card=document.getElementById("txtCard").value;
+            var cvv=document.getElementById("txtcvv").value;
+            var year=document.getElementById("lstYear").value;
+            var h1=document.querySelector("h1");
+            if(card==userDetails.Card)
+            {
+              if(cvv==userDetails.Cvv)
+              {
+                if(year==userDetails.Expiry)
+                {
+                    document.write("Payment Successfully");
+                }
+                else
+                {
+                    h1.innerHTML="Invalid Expiry";
+                }
+              }
+              else
+                {
+                    h1.innerHTML="Invalid CVV";
+                }
+            }
+            else
+            {
+                h1.innerHTML="Invalid Card";
+            }
+        }
+      </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Verify Card</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" id="txtCard"  maxlength="16"></dd>
+            <dt>Cvv</dt>
+            <dd><input type="text" id="txtcvv" size="4"></dd>
+            <dt>Expiry</dt>
+            <select  id="lstYear">
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+            </select>
+        </dl>
+        <button  onclick="PayClick()">Pay</button>
+    </fieldset>
+     <h1 align="center" style="color: red;"></h1>
+</body>
+</html>

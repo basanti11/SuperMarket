@@ -1,0 +1,67 @@
+<!--script>
+        function f1(){
+         var color = prompt("Enter Color Name");
+         switch(color)
+         {
+            case "red":
+            case "RED":
+            document.write(`You Selected ${color} color`.fontcolor('red'));
+            break;
+            case "green":
+            document.write(`You Selected ${color} color`.fontcolor('green'));
+            break;
+            case "blue":
+            document.write(`You Selected ${color} color`.fontcolor('blue'));
+            break;
+            default:
+            document.write("Plese enter only RGB");
+            break;
+         }
+    }
+    f1();
+</script-->
+
+<!--script>
+        function f1(){
+         var color = prompt("Enter Color Name");
+         switch(color.toLowerCase())
+         {
+            case "red":
+            document.write(`You Selected ${color} color`.fontcolor('red'));
+            break;
+            case "green":
+            document.write(`You Selected ${color} color`.fontcolor('green'));
+            break;
+            case "blue":
+            document.write(`You Selected ${color} color`.fontcolor('blue'));
+            break;
+            default:
+            document.write("Plese enter only RGB");
+            break;
+         }
+    }
+    f1();
+
+</script-->
+
+
+<script> //9. How case is a boolean expression what must be the switch value?
+    //A. Only true.
+    
+    function f1(){
+        var n = parseInt(prompt("Enter Your Number")); 
+    switch(true)
+        {
+            case (n>=1 && n<=10):
+            document.write(`Your number ${n} is between 1 to 10`);
+            break;
+            case (n>10 && n<=20):
+            document.write(`Your number ${n} is between 11 to 20`);
+            break;
+            case (n>20 && n<=30):
+            document.write(`Your number ${n} is between 21 to 30`);
+            break;
+        }  
+    }
+    f1();
+</script>

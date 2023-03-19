@@ -1,0 +1,27 @@
+<script>
+    class Employee
+    {
+      FirstName;
+      LastName;
+      Designation;
+      Role;
+    }
+
+    class Form
+    {
+        FormTitle="Registration Form";
+        FormMethod="POST";
+        FormData={
+            Details:new Employee(),
+            JoinDate: new Date()
+        }
+        get Details()
+        {
+            return this.FormData.Details;
+        }
+    }
+
+    let frm=new Form();
+    frm.Details.FirstName="Tom";
+    frm.Details.LastName="Hanks";
+</script>

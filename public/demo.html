@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="shortcut icon" href="favicon1.ico">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+      header
+      {
+        /*background-color: aquamarine;*/
+       
+        justify-content: space-between;
+        height: 85px;;
+        display: grid;
+        grid-template-columns: 2fr 6fr 4fr;
+        
+      }
+      .topline
+      {
+         /*background-color: rgb(27, 26, 26);*/
+         height: 5px;
+         
+      }
+      .brand-name
+      {
+         font-size: 60px;
+         font-weight: bold;
+         color: rgb(19, 15, 54);
+         padding-left: 60px;
+         padding-top: 35px;
+         /*margin-top: 30px;*/
+
+      }
+       nav
+      {
+        padding-top: 50px;
+        padding-left:150px;
+        padding-bottom:5px;;
+      }
+     nav span
+      {
+        font-size: 18px;
+        padding-right:20px;
+        padding-top: 65px;
+        
+      }
+      .rightline
+      {
+         /*display: grid;*/
+         /*grid-template-columns:10fr 2fr;*/
+         /*background-color: brown;*/
+         padding-left: 350px;
+         padding-top: 30px;
+         justify-content: space-between;
+         
+      }
+      span
+      {
+         font-size: 20px;
+         padding-right:30px;
+      }
+      nav span:hover
+      {
+         color: black;
+         font-weight: bold;
+         cursor: grab;
+      }
+      section
+      {
+         height: 500px;
+      }
+      .dfig
+      {
+         height: 500px;
+         display: grid;
+         display: flex;
+         grid-template-columns: 3fr 3fr 3fr;
+      }
+      figure
+      {
+        height: 300px;
+        width:300px;
+        border:1px solid black;
+        padding: 10px;
+        
+      }
+      .img
+      {
+         height: 280px;
+         width: 300px;
+         border: 1px dotted black;
+         margin-bottom: 20px;
+         background-color: aqua;
+      }
+      figcaption
+      {
+            font-size: 5px;
+            border: 1px solid black;
+            background-color: darkblue;
+            color: white;
+            font-size: 20px;
+            padding:5px;
+            text-align:center;
+            
+            
+      }
+      footer
+      {
+        display: flex;
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr 4fr;
+        background-color:rgb(41, 30, 48);
+        color: white;
+        padding-left: 50px;
+        /*font-size: 15px; */
+         
+     }
+      .footer-title
+      {
+         font-size:20px;
+         padding-top: 30px;
+      }
+      .footer-title~div
+      {
+         padding-top: 10px;
+         font-family: Arial, Helvetica, sans-serif;
+         font-style: normal;
+         font-size: 15px;
+      }
+    </style>
+</head>
+<body>
+   <div class="topline"></div>
+
+    <header>
+       <div>
+          <span class="brand-name">AJIO</span>
+       </div>
+       <div>
+           <nav>
+              <span>MEN</span>
+              <span>WOMEN</span>
+              <span>KIDS</span>
+              <span>INDIE</span>
+              <span>HOME AND KITCHEN</span>
+           </nav>
+       </div>
+       <div class="rightline">
+            
+               <span class="bi bi-heart" ></span>
+               <span class="bi bi-bag"></span>
+       </div>
+    </header>
+    <section>
+      <div class="dfig">
+        <figure>
+            <div class="img"><img src="./shoess1.jpg" alt="shoess" width="300" height="270" ></div>
+            <figcaption>Sports & Casual Shoes</figcaption>
+         </figure>
+         <figure>
+               <div class="img"></div>
+               <figcaption>Women Shoes</figcaption>
+         </figure>
+         <figure>   
+            <div class="img"></div>
+            <figcaption>Simplicity Sweater Dress</figcaption>
+        </figure>
+        <figure>
+         <div class="img"></div>
+         <figcaption>Wrist Watch</figcaption>
+        </figure>
+      </div>
+    </section>
+    <footer>
+         <div>
+               <div class="footer-title">Ajio</div>
+               <div>Who We Are</div>
+               <div>Join Our Team</div>
+               <div>Terms & Conditions</div>
+               <div>We Respect Our Privacy</div>
+               <div>Fees & Payments</div>
+               <div>Return & Refund Policy</div>
+               <div>Promotion Terms And Conditions</div>
+
+        </div>
+        <div>
+              <div class="footer-title">Help</div>
+               <div>Track Your Orders</div>
+               <div>Frequently Asked Question</div>
+               <div>Returns</div>
+               <div>Cancellation</div>
+               <div>Payments</div>
+               <div>Customer Care</div>
+               <div>How Do I Redeem My coupon</div>
+
+        </div>
+        <div>
+            <div class="footer-title">Shop by</div>
+                <div>Men</div>
+               <div>Women</div>
+               <div>Kids</div>
+               <div>Idie</div>
+               <div>Stores</div>
+               <div>New Arrivals</div>
+               <div>Brand Directory</div>
+               <div>Home</div>
+               <div>Collection</div>
+
+        </div>
+      <div>
+                <div class="footer-title">Follow Us</div>
+                <div>Facebook</div>
+                <div>Instagram-Ajiolife</div>
+                <div>Instagram-Ajio LUXE</div>
+                <div>Twiteer</div>
+                <div>Pinterest</div>
+      </div>
+    </footer>
+</body>
+</html>

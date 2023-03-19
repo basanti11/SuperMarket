@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        header
+        {
+          display: flex;
+          justify-content: space-between;
+          font-family: Arial, Helvetica, sans-serif;
+          padding: 10px;
+        }
+        /*.htop
+        {
+            margin: 0px 140px 0px 140px;
+            /*background-color: aquamarine;
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+       /* }*/
+        .brand-name
+        {
+          font-size: 32px;
+          font-weight: bold;
+        }
+        nav span
+        {
+          font-size: 28px;
+          margin-left: 20px;
+        }
+        .top-title
+        {
+            /*height: 25px;*/
+            margin-top: 15px;
+            background-color: black;
+            color: white;
+            text-align:center;
+            padding: 14px 10px 10px 5px;
+            letter-spacing: 5px;
+            font-size: 12px;
+        }
+        main
+        {
+          display:grid;
+          grid-template-columns: 4fr 4fr 4fr;
+          height: 450px;
+          margin-top: 10px;
+        }
+        .women
+        {
+            background-image: url("../public/images/women.JPG");
+            background-size: cover;
+            opacity: 0.8;
+        }
+        .men
+        {
+          background-image: url("../public/images/Men.jpg");
+          background-size: cover;
+          opacity: 0.8;
+        }
+        .kids
+        {
+           background-image: url("../public/images/kids-dress.jpg");
+           background-size: cover;
+           opacity: 0.8;
+        }
+        .women:hover , .men:hover , .kids:hover
+        {
+            opacity:1.0;
+            cursor: grab;
+        }
+        .banner-title
+        {
+            font-size: 50px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            font-weight: bold;
+        }
+       .card-body
+        {
+          height: 300px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .card-footer
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+       .banner-button
+        {
+            padding: 10px;
+            width: 230px;
+            border: none;
+            background-color: white;
+            font-size: 18px;
+        }
+        .banner-button:hover
+        {
+            cursor: grab;
+        }
+        .banner-button span
+        {
+            margin-left: 15px;
+        }
+        .banner-button:hover span
+        {
+            margin-left: 25px;
+        }
+        .row-container
+        {
+           /*background-color: coral;*/
+          display: grid;
+          grid-template-columns: 3fr 3fr 3fr 3fr;
+          margin-top: 15px;
+          margin-left: 90px;
+          margin-right: -80px;
+          width: 80%;
+        }
+        .row1
+        {
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .row1-left
+        {
+            margin-left:120px;
+            margin-top: 10px;
+            color: red;
+        }
+        .row1-right
+        {
+            margin-top: 10px;
+            margin-left: -38px;
+        }
+        .row1-border
+        {
+            border-bottom: 1px solid grey;
+            margin: 15px 180px 30px 150px;
+        }
+        .row2
+        {
+         text-align: center;  
+        }
+        .New-Collection
+        {
+            color: grey;
+            font-size: 12px;
+            margin-top: 23px;
+            padding-top: 80px;
+        }
+        .Best-h1
+        {
+            font-size: 38px;
+            padding-top: -15px;
+        }
+        .row2-para
+        {
+            font-size: 34x;
+            line-height: 28px;
+            padding-top: 15px;
+        }
+        .row3
+        {
+            width: 80%;
+           /* background-color: aqua;*/
+            margin: 60px 200px 0px 150px;
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+        }
+        .left-row3
+        {
+            height: 600px;
+            width:550px ;
+            background-image: url("../public/images/Womenbag.jpg");
+            background-size: cover;
+       }
+       .left-row3:hover
+       {
+        width: 560px;
+        transition: 0.5s;
+       }
+      /* .row3-left-body
+       {
+        justify-content: baseline;
+        padding: 280px 0px 0px 100px;
+        font-size: 40px;
+        color: white;
+       }
+        /*.lr3img
+        {
+            height: 600px;
+            width: 540px;
+        }*/
+        .row3-footer
+        {
+            justify-items: baseline;
+            padding: 20px 0px 0px 100px;
+            height: 50px;
+            
+        }
+        .right-row3
+        {
+            height: 600px;
+            width:830px ;
+            background-image: url("../public/images/MPrintShirt1.jpg");
+            background-size: cover;
+        }
+        .right-row3:hover
+        {
+            width: 840px;
+            transition: 0.5s;
+        }
+
+        .row3-body
+        {
+            height: 300px;
+            align-items: center;
+            display: flex;
+            justify-content:center;
+            font-size: 40px;
+            color: white;
+        }
+        .row3-right-body
+        {
+            height: 300px;
+           /* align-items: center;
+            justify-content: center;
+            display: flex;*/
+            color: black;
+            justify-content: baseline;
+            padding: 280px 0px 0px 100px;
+            font-size: 40px;
+            position: relative;
+        }
+        .offer
+        {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border-radius: 990px;
+            background-color: red;
+            color: white;
+            margin: -230px 50px 0px 600px;
+        }
+        .row3-footer p
+        {
+            font-size: 20px;
+            padding-top: 25px;
+
+        }
+        .row3-footer p:hover span
+        {
+            cursor: grab;
+            margin-left: 10px;
+        }
+        .row4
+        {
+            display:grid;
+            grid-template-columns: 8fr 4fr;
+            width: 80%;
+            /*background-color: aqua;*/
+            margin: 60px 200px 0px 150px;
+        }
+        .left-row4
+        {
+            height: 600px;
+            width: 860px;
+            background-image: url("../public/images/women-basic-dress.JPG");
+            background-size: cover;
+        }
+        .left-row4:hover
+        {
+            width: 864px;
+            transition: 0.3s;
+        }
+
+        .right-row4
+        {
+            height: 600px;
+            width: 520px;
+            background-image: url("../public/images/sweater1.jpg");
+            background-size: cover;
+            /*overflow: hidden;*/
+        }
+        .right-row4:hover
+        {
+          width: 524px;
+          transition: 0.3s;
+        }
+        .row4-right-body
+        {
+            color: white;
+            
+            justify-content: baseline;
+            padding: 280px 0px 0px 100px;
+            font-size: 40px;
+        }
+        .row4-footer 
+        {
+          
+            margin-top: -5px;
+            font-size: 20px;
+            color: white;
+            margin-left: 110px; 
+            width: 230px;
+       }
+       .row5
+       {
+        text-align: center;
+        font-size: 38px;
+        margin-top: 100px;
+        font-size: 50px;
+        /*background-color: cornflowerblue;*/
+       }
+       .row6
+       {
+          width: 100%;
+          margin-top: -26px;
+       }
+       .list
+       {
+        display: flex;
+        /*background-color: blue;*/
+        justify-content: center;
+       }
+       .sublist
+       {
+        display: inline;
+        list-style: none;
+        font-size: 20px;
+        margin: 30px 40px 0px 0px;     
+     }
+     .sublist:hover
+     {
+       cursor: grab;
+       color: red;
+       text-decoration: underline;
+     }
+     .row7
+     {
+        width: 100%;
+        margin-top: 50px;
+     }
+     .card-collection
+     {
+        height: 525px;
+        display: grid;
+        display: flex;
+        grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr;
+        width: 83%;
+        /*background-color: brown;*/
+        margin-left: 120px;
+        margin-right: -50px;
+        
+    }
+    figure
+    {
+        margin-left: 22px;
+        margin-right: 20px;
+        /*overflow: hidden;*/
+    }
+    .icon
+    {
+     
+            animation-name: SlideIn;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            text-align: center;
+    }
+    
+    @keyframes SlideIn
+     {
+        From
+        {
+          margin-top: 50px;
+        }
+       to
+        {
+          margin-top: 0px;
+        }  
+     }
+     .card1
+     {
+        height: 400px;
+        width: 320px;
+        background-image: url("../public/images/sandles.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+     }
+     .card1:hover
+     {
+        cursor: grab;
+        background-image: url("../public/images/sandles1.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 400px;
+        width: 320px;
+    }
+     .card2
+     {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 400px;
+        width: 320px;
+        background-image: url("../public/images/floraldressw.jpg");
+     }
+     .card2:hover
+     {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 400px;
+        width: 320px;
+        background-image: url(../public/images/dress.jpg);
+     }
+     .card3
+     {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 400px;
+        width: 320px;
+        background-image: url("../public/images/shoess.jpg");
+     }
+     .card3:hover
+     {
+       cursor: grab;
+       background-image: url("../public/images/legshoes.jpg");
+       background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 400px;
+        width: 320px;
+     }
+     .card4
+     {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 400px;
+        width: 320px;
+        background-image: url("../public/images/croptop.jpg");
+   
+     }
+     .card2-title
+     {
+      padding-top: -10px; 
+      font-size: 20px;
+      color: grey; 
+     }
+    /* .card2-para
+     {
+        padding-top: -30px;
+        margin-top: -32px;
+        font-size: 18px;
+     }*/
+     figcaption
+     {
+        height: 125px;
+        
+    }
+     .bi
+     {
+       margin-right: 50px;
+       font-size: 20px;
+     }
+     
+     .row12
+     {
+        width: 100%;
+     }
+     .Box
+     {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr;
+        /*background-color: blueviolet;*/
+        margin: 80px 500px 0px 240px;
+     }
+     .box1,.box2,.box3
+     {
+        height: 400px;
+        width: 400px;
+        border: 1px  solid grey;
+     }
+     .box1-head
+     {
+        height: 100px;
+        margin: 30px 10px 0px 50px;
+     }
+     .box-img
+     {
+        float: left;
+        height: 100px;
+        width: 100px;
+     }
+     .box-title
+     {
+        margin-left: 115px;
+        font-size: 18px;
+        color: grey;
+     }
+     .box-para
+     {
+        margin-left: 115px; 
+        margin-top: -12px;
+        font-size: 20px;
+     }
+     .box-body
+     {
+        margin: 30px 10px 0px 50px;
+
+     }
+     .box1-para
+     {
+        padding: 20px 10px 0px 50px;
+        color: grey;
+     }
+     .box1-footer p
+     {
+        padding: 20px 10px 0px 50px;
+        color: grey;
+     }
+     .card-collect
+     {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+        /*background-color: aquamarine;*/
+        margin: 0px 350px 0px 200px;
+        display: flex;
+     }
+     .fig2
+     {
+       margin-right: 10px;
+     }
+     footer
+     {
+       width: 100%;
+       background-color: rgb(34, 34, 34);
+     }
+     .footer-top
+     {
+        width: 80%;
+        align-items: center;
+        color: white;
+        margin-top: 80px;
+        margin-left: 300px;
+        margin-right: 300px;
+        /*background-color: blueviolet;*/
+     }
+     .footer-bottom
+     {
+        display: grid;
+        grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+        margin-top: 100px;
+        width: 100%;
+        margin-left: 200px;
+        margin-right: 400px;
+        color: white;
+     }
+     
+    </style>
+</head>
+<body>
+    <header>
+        <!--div class="htop"-->
+            <div>
+                <span class="brand-name">Shopper.</span>
+            </div>
+            <div>
+                <nav>
+                    <span>Home</span>
+                    <span>Catalog</span>
+                    <span>Shop</span>
+                    <span>Pages</span>
+                    <span>Blog</span>
+                    <span>Doc</span>
+                </nav>
+            </div>
+            <div>
+                <nav>
+                    <span class="bi bi-search"></span>
+                    <span class="bi bi-person"></span>
+                    <span class="bi bi-heart"></span>
+                    <span class="bi bi-cart"></span>
+                </nav>
+            </div>
+        <!--/div-->
+    </header>
+    <div class="top-title">
+        HAPPY HOLIDAYS DEALS ON EVERYTHING
+    </div>
+    <main>
+        <div class="women">
+            <!--div class="card"--> 
+                <div class="card-body">
+                    <div class="banner-title">Women</div>
+                </div>
+                <div class="card-footer">
+                    <div class="banner-button">Shop Women<span class="bi bi-arrow-right"></span></div>
+                </div>
+            <!--/div-->
+        </div>
+        <div class="men">
+            <!--div class="card"--> 
+                <div class="card-body">
+                    <div class="banner-title">Men</div>
+                </div>
+                <div class="card-footer">
+                    <div class="banner-button">Shop Men<span class="bi bi-arrow-right"></span></div>
+                </div>
+            <!--/div-->
+        </div>
+        <div class="kids">
+            <!--div class="card"--> 
+                <div class="card-body">
+                    <div class="banner-title">Kids</div>
+                </div>
+                <div class="card-footer">
+                    <div class="banner-button">Shop Kids<span class="bi bi-arrow-right"></span></div>
+                </div>
+            <!--/div-->
+        </div>
+    </main>
+    <div class="row-container">
+        <div class="row1">
+             <div class="row1-left">  
+                <span class="bi bi-truck"></span>
+             </div>
+              <div class="row1-right">
+                <h5 class="row1-title">FREE SHIPPING</h5>
+                <p class="row1-para">From all orders over $100</p>
+              </div>
+        </div>
+        <div class="row1">
+            <div class="row1-left">  
+                 <span class="bi bi-arrow-left-right"></span>
+            </div>
+            <div class="row1-right">
+                 <h5 class="row1-title">FREE RETURNS</h5>
+                 <p class="row1-para">Return money within 30 days</p>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="row1-left">  
+                <span class="bi bi-lock"></span>
+            </div>
+            <div class="row1-right">
+                <h5 class="row1-title">SECURE SHOPPING</h5>
+                <p class="row1-para">You are in safe hands</p>
+            </div>
+        </div>
+        <div class="row1">
+            <div class="row1-left">  
+                 <span class="bi bi-tag"></span>
+            </div>
+            <div class="row1-right">
+                 <h5 class="row1-title">OVER 10,000 STYLES</h5>
+                 <p class="row1-para">We have everything you need</p>
+            </div>
+        </div>
+    </div>
+    <div class="row1-border"></div>
+    <section>
+        <div class="row2">
+            <div class="New-Collection"><h4>NEW COLLECTION</h4></div>
+            <div class="Best"><h1 class="Best-h1">Best Picks, 2019</h1>
+            <p class="row2-para">Appear, dry there darkness they're seas, dry waters thing fly midst.Beast, 
+                <br>above fly brought Very green.
+            </p></div>
+        </div>
+        <div class="row3">
+            <div class="left-row3">
+                <div class="row3-right-body">Bags Collection
+                </div>
+                <div class="row3-footer">
+                    <p>Shop Now <span class="bi bi-arrow-right"></span></p>
+                </div>
+            </div>
+            <div class="right-row3">
+                <div class="row3-right-body">Men's printed Shirts
+                    <div class="offer"><p style="font-size: 16px; font-weight: bold;  text-align: center; line-height: 36px;">Save <br><font style="font-size: 30px;">30%</font></p></div>
+                </div>
+                
+                <div class="row3-footer">
+                      <p>Shop Now<span class="bi bi-arrow-right"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="row4">
+            <div class="left-row4">
+                <div class="row4-right-body">Women's basic Dresses</div>
+                
+                <div class="row4-footer">
+                      <p>Shop Now<span class="bi bi-arrow-right"></span></p>
+                </div>
+           </div>
+           <div class="right-row4">
+            <div class="row4-right-body">Sweet Sweaters</div>
+                
+            <div class="row4-footer">
+                  <p>Shop Now<span class="bi bi-arrow-right"></span></p>
+            </div>
+          </div>
+        </div>
+        <div class="row5">
+            <h3 style="font-size: 40px;">Top month Sellers</h3>
+        </div>
+        <div class="row6">
+           <ul class="list">
+            <li class="sublist">Women</li>
+            <li class="sublist">Men</li>
+            <li class="sublist">kids</li>
+           </ul>
+        </div>
+        <div class="row7">
+            <div class="card-collection">
+               <figure>
+                <div class="card1"></div>
+                    <figcaption>
+                        <h5 class="card2-title">Shoes</h5>
+                        <p class="card2-para">Leather mid-hills sandles</p>
+                        <p style="margin-top:-16px;">$129.00</p>
+                        
+                    </figcaption>
+                    <div class="icon">
+                        <span class="bi bi-eye" style="margin-right: 24px;"></span>
+                        <span class="bi bi-cart" style="margin-right: 24px;"></span>
+                        <span class="bi bi-heart" style="margin-right: 24px;"></span>
+                    </div>
+                   </figure>
+                
+                <figure>
+                    <div class="card2"></div>
+                    <figcaption>
+                        <h5 class="card2-title">Dresses</h5>
+                        <p class="card2-para">Cotton floral-print Dress</p>
+                        <p style="margin-top:-16px;">$40.00</p>
+                    </figcaption>
+                    <div class="icon">
+                        <span class="bi bi-eye" style="margin-right: 24px;"></span>
+                        <span class="bi bi-cart" style="margin-right: 24px;"></span>
+                        <span class="bi bi-heart" style="margin-right: 24px;"></span>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="card3"></div>
+                    <figcaption>
+                        <h5 class="card2-title">Shoes</h5>
+                        <p class="card2-para">Leather Sneakers</p>
+                        <p style="margin-top:-16px;"><strike style="color:red;">$85.00</strike>&nbsp;$85.00</p>
+                    </figcaption>
+                    <div class="icon">
+                        <span class="bi bi-eye" style="margin-right: 24px;"></span>
+                        <span class="bi bi-cart" style="margin-right: 24px;"></span>
+                        <span class="bi bi-heart" style="margin-right: 24px;"></span>
+                    </div>
+                </figure>
+                <figure>
+                    <div class="card4"></div>
+                    <figcaption>
+                        <h5 class="card2-title">Tops</h5>
+                        <p class="card2-para" >Crop cotton tops</p>
+                        <p style="margin-top:-16px;">$29.00</p>
+                    </figcaption>
+                    <div class="icon">
+                        <span class="bi bi-eye" style="margin-right: 24px;"></span>
+                        <span class="bi bi-cart" style="margin-right: 24px;"></span>
+                        <span class="bi bi-heart" style="margin-right: 24px;"></span>
+                    </div>
+                </figure>
+        </div>
+</div>
+        
+        <div class="row9" style="width: 100%; margin-top: 80px;  text-align: center; font-size: 25px;">
+            <p>Discover more</p>
+        </div>
+        <div class="row10-border" style="width:15%; border-bottom: 1px solid black; margin-right: 920px; margin-left: 770px;"></div>
+        <div class="row11" style="width:100%; margin-top:80px;">
+           <img src="../public/images/sandlebanner.JPG" width="100%"; >
+        </div>
+        <div class="review" style="margin-top: 80px; align-items: center;">
+            <h4 class="buyer" style="font-size: 16px;  text-align: center; color: grey;">WHAT BUYER SAY</h4>
+            <P class="review" style="text-align: center;margin-top: -10px; font-size: 40px; font-family: 'Times New Roman', Times, serif; padding-top: -30px;">Latest buyers Reviews</P>
+        </div>
+        <div class="row12">
+            <div class="Box">
+                <div class="box1">
+                    <div class="box1-head">
+                        <img class="box-img" src="../public/images/shoes.jpg">
+                        <h4  class="box-title">Shoes</h4>
+                        <p class="box-para">Low top Sneakers</p>
+                        <span class="bi bi-star-fill" style="color: red; font-size: 16px; margin-left: 10px;"></span> 
+                        <span class="bi bi-star-fill" style="color: red; font-size: 16px;"></span>
+                        <span class="bi bi-star-fill" style="color: red; font-size: 16px;"></span> 
+                       <span class="bi bi-star-fill" style="color: red; font-size: 16px;"></span>
+
+                    </div>
+                    <div class="box1-body">
+                        
+                        <p class="box1-para">From creepth said moved given divided make multiple of him shall itself also above
+                             second doesn't unto created saying land herb sea midst night wherein.</p>
+                    </div>
+                    <div class="box1-footer"><P>Logwan Edwards, 01 June,2019</P></div>
+                </div>
+                <div class="box2">
+                    <div class="box1-head">
+                    <img class="box-img" src="../public/images/wcottonprint.jpg">
+                    <h4 class="box-title">Dresses</h4>
+                    <p class="box-para">Cotton print dress</p>
+                    </div>
+                    <div class="box1-body">
+                        <p class="box1-para">From creepth said moved given divided make multiple of him shall itself also above
+                         second doesn't unto created saying land herb sea midst night wherein.
+                         second doesn't unto created saying land herb sea midst night wherein.
+                         second doesn't unto created saying land herb sea midst night wherein.
+                        </p>
+                    </div>
+                    <div class="box1-footer"><P>Logwan Edwards, 01 June,2019</P></div>
+                </div>
+                <div class="box3">
+                    <div class="box1-head">
+                    <img class="box-img" src="../public/images/men's-t-shirt.jpg">
+                    <h4 class="box-title">T-Shirts</h4>
+                    <p class="box-para">Overseas print T-shirt</p>
+                    </div>
+                    <div class="box1-body">
+                        
+                        <p class="box1-para">From creepth said moved given divided make multiple of him shall itself also above
+                          second doesn't unto created saying land herb sea midst night wherein.</p>
+                    </div>
+                    <div class="box1-footer"><P>Logwan Edwards, 01 June,2019</P></div>
+                </div>
+            </div>
+        </div>
+        <div class="section-bottom" style="width: 100%; margin-top: 150px;">
+            <div class="section-bottom-top" style="width: 50%; margin: 0px 400px 0px 400px;">
+              <h3 style="text-align: center; padding-left: 100px; font-size: 38px;">@shopper</h3>
+              <p style="text-align: center; color: grey; font-size: 18px; padding-left: 90px;">Appear, dry there darkness they're seas, dry waters.</p>
+            </div>
+            <div class="section-bottom-botom" style=" margin-top: 40px;">
+                <div class="card-collect">
+                    <figure class="fig2"><img src="../public/images/floral-dress.jpg" height="210px" width="210px"></figure>
+                    <figure class="fig2"><img src="../public/images/men-wristwatch.jpg" height="210px" width="210px"></figure>
+                    <figure class="fig2"><img src="../public/images/women-google.jpg" height="210px" width="210px"></figure>
+                    <figure class="fig2"><img src="../public/images/men-jacket.jpg" height="210px" width="210px"></figure>
+                    <figure class="fig2"><img src="../public/images/women-skirt.jpg" height="210px" width="210px"></figure>
+                    <figure class="fig2"><img src="../public/images/women-watch.jpg"  height="210px" width="210px"></figure>
+                </div>
+            </div>
+        </div>
+        <div style="align-items: center; margin-left: 500px; margin-top: 30px;">
+            <img src="../public/images/group-word.JPG"> 
+        </div>
+    </section>
+    <footer>
+       <div class="footer-top">
+           <h4 style="padding-left: 430px; padding-top: 100px; font-size: 28px;">Want style Ideas and Treats?</h4>
+           <input type="text" required placeholder=" Enter Email*" style="height: 60px; width: 400px; background-color: rgb(73, 72, 72); margin-top: 20px; margin-left: 350px;">
+            <button style="color: white; width: 150px; height: 60px; margin-top: 20px; margin-left: 10px; background-color: rgb(73, 71, 71);">Submit</button>
+        </div>
+        <div class="footer-bottom">
+                <ul style="list-style: none;">
+                    <h4>Shoper.</h4>
+                    <li class="span">
+                        <span class="bi bi-facebook"></span>
+                        <span class="bi bi-twitter"></span>
+                        <span class="bi bi-youtube"></span>
+                        <span class="bi bi-instagram"></span>
+                    </li>
+                </ul>
+                <ul style="list-style: none;">
+                    <h4>SUPPORT</h4>
+                    <li>Contact Us</li>
+                    <li>FAQs</li>
+                    <li>Size Guide</li>
+                    <li>Shipping & Guiding</li>
+                </ul>
+                <ul style="list-style: none;">
+                    <h4>Shop</h4>
+                    <li>Men's Shopping</li>
+                    <li>Women's Shopping</li> 
+                    <li>Kid's Shopping</li>
+                    <li>Discounts</li>
+                </ul>
+                <ul style="list-style: none;">
+                    <h4>COMPANY</h4>
+                    <li>Our Story</li>
+                    <li>Carrers</li>
+                    <li>Term & Conditions</li>
+                    <li> Privacy & Cokkie policy</li>
+                </ul>
+                <ul style="list-style: none;">
+                    <h4>Contact</h4>
+                    <li>1-202-555-0105</li>
+                    <li>1-202-555-0106</li>
+                    <li>help@shopper.com</li>
+                </ul>
+        </div>
+    </footer>
+</body>
+</html>

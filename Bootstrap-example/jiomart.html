@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIOMART</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script type="text/javascript">
+      
+       var userDetails={
+        "eml":"abcd@gmail.com",
+        "moble":"9876543210",
+        "pas":"123"
+       }
+       function signIn()
+       {
+         var email=document.getElementById("Email").value;
+         var mobile=document.getElementById("Email").value;
+         var Pass=document.getElementById("pass").value;
+         if(email==userDetails.eml && Pass==userDetails.pas)
+         {
+           alert("Sign In Successfull");
+         }
+         else if(mobile==userDetails.moble && Pass==userDetails.pas)
+         {
+          alert("Sign In Successfull")
+         }
+         else
+         {
+          alert("Either Email/Mobile or Password Invalid")
+         }
+       }
+       /*function LoadPage(pageName){
+            $.ajax({
+                method:'get',
+                url: pageName,
+                success: function(data){
+                    $("section").html(data);
+                }
+            })
+         }
+
+         $(function(){
+              LoadPage("jiomart-signup.html");
+
+              $("button").click(function(e){
+                   LoadPage(`${e.target.name}.html`);
+              })
+         })*/
+
+         var cartItems=[];
+        function GetCartCount()
+        {
+            document.getElementById("lblCount").innerHTML=cartItems.length;
+        }
+
+        
+         function AddToClick()
+         {
+    
+             cartItems.push(item);
+             GetCartCount();
+         }
+    </script>
+    <style>
+        header
+        {
+          height: 130px;
+          width: 100%;
+
+        }
+        .top-header
+        {
+          
+          justify-content: space-between;
+          display: flex;
+          color: white;
+          height: 60px;
+        }
+        .signin,.cart:hover
+        {
+          cursor: grab;
+        }
+        .menuItem
+        {
+          color: white;
+          padding-top: 10px;
+          margin-left: 14px;
+        }
+        .menuItem:hover
+        {
+          cursor:grabbing;
+        }
+        .deals
+        {
+          display: flex;
+          display: grid;
+          grid-template-columns: 6fr 6fr;
+          height: 400px;
+        }
+        .card1
+        {
+          background-image: url("./image/electronics.jpg");
+          height: 400px;
+          background-size: cover;
+          
+        }
+        .card1-title
+        {
+          /*margin: 80px 10px 10px 150px;*/
+          color: white;
+        }
+        .card1-body
+        {
+          margin: 100px 10px 10px 150px;
+        }
+        .rightdeals
+        {
+          background-image: url("./image/device.jpg");
+          height: 400px;
+          background-size: cover;
+          position:relative;
+        }
+        .limited-deals
+        {
+          position: absolute;
+          height: 8s0px;
+          width: 320px;
+          background-color: red;
+          color: white;
+          margin: 140px -1800px 0px 300px;
+          border-radius: 20px;
+        }
+        .row1
+        {
+          display: grid;
+          grid-template-columns: 3fr 6fr 3fr ;
+        }
+        .row2
+        {
+          background-image: url("./image/fitness.JPG");
+          height: 250px;
+          width: 100%;
+          background-size: cover;
+        }
+        .row3
+        {
+          margin-top: 30px;
+          font-weight: bold;
+          font-size: 40px;
+          color: black;
+        }
+        .row4
+        {
+          margin-top: 20px;
+          display: grid;
+          grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+          
+        }
+        .fig
+        {
+          height: 230px;
+        }
+        .fig:hover
+        {
+          width:220px;
+          transition: 2s;
+        }
+        .card2
+        {
+          background-color:rgb(190, 190, 240);
+          height: 200px;
+          margin-right: 20px;
+          border-top-right-radius:70px; 
+          border-bottom-left-radius: 70px;
+        }
+        .card2-img
+        {
+        
+           width:150px;
+           height:160px;
+           margin-top: 26px;
+           margin-left: 30px;
+        }
+        .row6
+        {
+          display: grid;
+          grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+        }
+        .fig2
+        {
+          height: 350px;
+          border: 1px solid grey;
+          margin-right: 10px;
+          position: relative;
+        }
+        .card3
+        {
+          height: 200px;
+          position: relative;
+        }
+        .offer
+        {
+          background-color: rgb(228, 26, 26);
+          position: absolute;
+          border-radius: 40px;
+          width: 42px;
+          height: 42px;
+          margin: -180px 0px 0px 8px;
+          color: white;
+          font-size: 14px;
+          padding-left: 8px;
+        }
+        .card3-img
+        {
+          height: 190px;
+        }
+        .card3-img:hover
+        {
+          width: 200px;
+          transition: 2s;
+        }
+        .figcapt
+        {
+          margin-top: -10px;
+        }
+        footer
+        {
+          background-color: lightgray;
+        }
+        .top-footer
+        {
+          display: grid;
+          grid-template-columns: 4fr 4fr 4fr;
+          justify-content: center;
+          margin-left: 30px;
+          margin-right: 10px;
+          border-bottom: 0.5px solid grey;
+        }
+        .list-heading
+        {
+          padding-top: 40px;
+          color: black;
+          font-size: 15px;
+        }
+        .list
+        {
+          list-style: none;
+          font-size: 14px;
+          color: gray;
+        }
+        .bottom-footer
+        {
+           display: flex;
+           padding-top: 10px;
+        }
+    </style>
+</head>
+<body class="container-fluid">
+    <header class="container-fluid" style="position: sticky;">
+      <div class="top-header bg-primary w-100">
+       <div class="input-group w-75 ms-5">
+        <h5 class="pt-1 pe-3" style="font-size: 34px;">JioMart</h5>
+         <input type="text" class="form-control mt-2 mb-4 w-25" required placeholder=" Search essential Groceries and more..">
+         <button class="btn btn-warning mt-2 mb-4">
+            <span class="bo bi-search"></span>
+         </button>
+       </div>
+       <div class=" signin mt-2">
+            <button class="btn btn-primary" data-bs-target="#login" data-bs-toggle="modal"><span class="bi bi-person-fill">&nbsp; Sign in</span></button>
+     </div>
+       <div class=" cart mt-2 me-4">
+        <button class="btn btn-primary">
+          <span class="bi bi-cart pe-3" id="lblCount">&nbsp;Cart<span class="badge rounded rounded-circle position-absolute bg-danger"></span>
+          <!--span id="lblCount" class="badge position-absolute bg-danger rounded-circle"></span-->
+         </span>
+        </button>
+       </div>
+     </div>
+     <div class="menu w-100 d-flex" style="background-color:rgb(64, 63, 70);">
+          <ul class="menuItem">
+              <h6><a href="jiomart.html"></a>Home</h6>
+              <!--li style="list-style: none;"><a href="jiomart.html"></a></li-->
+           </ul>
+           <ul class="menuItem">
+            <h6>Deliver to</h6>
+           </ul>
+           <ul class="menuItem">
+             <h6>Premium Fruits</h6> 
+          </ul>
+    
+           <ul class="menuItem">
+              <h6>Home & Kitchen</h6>
+           </ul>
+           <ul class="menuItem">
+            <h6>Fashion</h6>
+         </ul>
+        <ul class="menuItem">
+          <h6>Electronics</h6>
+       </ul> 
+       <ul class="menuItem">
+        <h6>Sports Toys & Luggage</h6>
+     </ul>
+     <ul class="menuItem">
+      <h6>Beauty</h6>
+   </ul>
+   <ul class="menuItem">
+    <h6>Jewellery</h6>
+ </ul>
+</div>
+    </header>
+    <section class="container-fluid">
+      <div class="modal fade" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h2 style="color: black;"><span class="bi bi-person-fill">Sign In</span></h2>
+                  <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl>
+                       <dd>
+                        <input type="text" id="Email" class="form-control" required placeholder="Either Mobile no OR email-id">
+                       </dd>
+                       <dd>
+                         <input type="number" id="pass" class="form-control" required placeholder="Password">
+                       </dd>
+                    </dl>
+                    <button class="btn btn-primary w-100" onclick="signIn()">SignIn</button>
+                </div>
+                <div class="modal-footer">
+                   <p>Don't have account</p><br>
+                   <a href="jiomart-signup.html" target="_blank">SignUp</a>
+                </div>
+            </div>
+        </div>
+      </div>
+     
+      <div class="carousel slide carousel-dark" id="topBanner" data-bs-ride="carousel" style="height: 200; margin-top: -20px;">
+          <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-ride="1000">
+                  <img src="./image/jioslide1.JPG" height="300px" class="d-block w-100">
+              </div>
+              <div class="carousel-item" data-bs-ride="1000">
+                <img src="./image/jioslide2.JPG" height="300px" class="d-block w-100">
+            </div>
+            <div class="carousel-item" data-bs-ride="1000">
+              <img src="./image/jioslide3.JPG" height="300px" class="d-block w-100">
+             </div>
+             <div class="carousel-item" data-bs-ride="1000">
+                <img src="./image/jioslide4.JPG"height="300px" class="d-block w-100">
+            </div>
+           <div class="carousel-item" data-bs-ride="1000">
+               <img src="./image/jioslide5.JPG" height="300px" class="d-block w-100">
+          </div>
+          <div class="carousel-item" data-bs-ride="1000">
+           <img src="./image/jioslide6.JPG" height="300px" class="d-block w-100 ">
+         </div>
+      </div>
+      <button data-bs-slide="prev" data-bs-target="#topBanner" class="carousel-control-prev">
+        <span class="carousel-control-prev-icon"></span>
+     </button>
+     
+     <button data-bs-slide="next" data-bs-target="#topBanner" class="carousel-control-next">
+         <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <div class="deals mt-2">
+       <div class="leftdeals">
+          <div class="card1">
+             <div class="card1-title">
+              <p style="padding: 50px 0px 0px 230px; font-weight: bold; font-size: 30px; color: red;">BLUCKUSTER</p>
+              <p style=" font-weight: bold; font-size: 50px; color:red; padding-left: 220px; padding-top: -200px;">DEALS</p>
+             </div>
+             <div class="card1-body">
+                <div style="width: 60%; margin-top:-90px; border: 1px solid black; border-radius: 2px 2px ; background-color: rgb(27, 10, 27);">
+                     <p style="padding: 10px 0px 0px 20px; font-size: 20px; font-style: bold; text-align: center; color: white;">On Mobiles & Electronics</p>
+                </div>
+             </div>
+             <div class="card1-footer">
+                <button class="shopnow" style=" width:200px; height: 50px; font-weight: bold; margin: 15px 0px 0px 200px; font-size: 20px;  border-radius: 45%; color: rgb(94, 2, 94);">Shop Now</button>
+             </div>
+          </div>
+      </div>
+       <div class="rightdeals">
+          <!--div class="card2">
+              <div class="card2-title"></div>
+              <div class="card2-body">
+
+              </div>
+              <div class="card2-footer"></div>
+          </div-->
+          <div class="limited-deals">
+               <h5 style="font-weight: bold; padding-left: 30px; padding-top: 10px;">Limited time only</h5>
+               <h3 style="font-weight: bold; padding-left: 30px;">24 HOURS DEALS</h3>
+          </div>
+       </div>
+    </div>
+    <div class="row1" style="background-color: rgb(52, 52, 168); height:150px; margin-top:2px;">
+      <div>
+         <img src="./image/jiosim.JPG" style="margin: 40px 0px 0px 60px;" height="62px">
+      </div>
+      <div style="text-align: center; margin-right: -180px;">      
+         <p style="color: white; padding-top:30px; padding-left:35px; font-size:45px;">Free SIM delivery all over time</p>
+      </div>
+      <div>
+         <button class="btn btn-danger" style=" border-radius:15px;margin-left:250px; margin-top: 40px; margin-right: 20px; width:280px; font-size: 20px; color:white; height: 60px;;">Get Jio SIM Now</button>
+      </div>
+    </div>
+    <div class="row2"></div>
+    <div class="row3"><p>Trending Brands</p></div>
+    <div class="row4">
+       <figure class="fig">
+          <div class="card2">
+             <img src="./image/samsung.jpg" class="card2-img">
+          </div>
+          <figcaption>
+              <h4 style="margin-left: 20px;">Upto 50% Off</h4>
+          </figcaption>
+       </figure>
+       <figure class="fig"> 
+                 <div class="card2">
+                   <img class="card2-img" src="./image/coreganic.jpg">
+                 </div>
+                 <figcaption>
+                  <h4 style="margin-left: 20px;">Upto 70% Off</h4>
+                </figcaption>
+       </figure>
+       <figure class="fig">
+           <div class="card2">
+              <img class="card2-img" src="./image/saree.jpg">
+           </div>
+           <figcaption> 
+            <h4 style="margin-left: 20px;">Upto 50% Off</h4>
+          </figcaption>
+       </figure>
+       <figure class="fig">
+          <div class="card2">
+                <img class="card2-img" src="./image/Trollybag.jpg">
+          </div>
+          <figcaption>          
+            <h4 style="margin-left: 20px;">Upto 50% Off</h4>
+          </figcaption>
+       </figure>
+       <figure class="fig">
+           <div class="card2">
+                <img class="card2-img" src="./image/mobile.jpg">
+           </div>
+           <figcaption>
+                     <h4 style="margin-left: 20px;">Upto 40% Off</h4>
+          </figcaption>
+       </figure>
+       <figure class="fig">
+            <div class="card2" style="margin-right: 0px;">
+                <img class="card2-img" src="./image/kitchen-set.jpg">
+            </div>
+            <figcaption>  
+                     <h4 style="margin-left: 20px;">Upto 50% Off</h4>
+            </figcaption>
+       </figure>
+      </div>
+      <div class="row5" style="margin-top: -40px;">
+         <p style="font-size: 24px; font-weight: bold; color: black; padding-top: 50px;">Top Deals</p>
+      </div>
+      <div class="row6">
+         <figure class="fig2">
+           <div class="card3">
+             <img class="card3-img" src="./image/surfexcel.jpg">
+             <div class="offer">
+                <p>22% <br>off</p>
+            </div>
+           </div>
+           <figcaption class="figcapt">
+               <div class="figcap-title">
+                 <p style="font-weight:bold; font-size:14px; padding-left: 5px; " >Surf Excel Matic Front Load Detergent Powder</p></div>
+               <div style="margin-top: -60px;">
+                   <p style="padding-left: 5px; padding-top: 44px; font-weight: bold;">&#8377; 267.00</p><br>
+               </div>
+                <div style="margin-top:-40px;">
+                  <p style=" padding-left: 5px;">M.R.P: &#8377;<strike>392.00</strike>s</p>
+                </div>
+                <div style="margin-top: -20px;">
+                  <p style="padding-left:8px;  color: green;" >Save; &#8377; 125.00</p>
+                </div>
+               <div style="margin-top: -15px;"><button class="btn btn-primary w-100 " onclick="AddToCart()">Add to Cart</button></div>
+           </figcaption>
+         </figure>  
+         <figure class="fig2">
+          <div class="card3">
+             <img class="card3-img" src="./image/sugar.jpg">
+             <div class="offer"><p>15% <br>off</p></div>
+          </div>
+           <figcaption class="figcapt">
+            <div class="figcap-title">
+              <p style="font-weight:bold; font-size:16px; padding-left: 15px; padding-top: 15px; " >Tur / Arhar Daal 2kg</p></div>
+            <div style="margin-top: -60px;">
+                <p style="padding-left: 5px; padding-top: 45px; font-weight: bold;">&#8377; 267.00</p><br>
+            </div>
+             <div style="margin-top:-40px;">
+               <p style=" padding-left: 5px;">M.R.P: &#8377;<strike>392.00</strike>s</p>
+             </div>
+             <div style="margin-top: -20px;">
+               <p style="padding-left:8px;  color: green;" >Save; &#8377; 125.00</p>
+             </div>
+            <div style="margin-top: -15px;"><button class="btn btn-primary w-100 " onclick="AddToCart()">Add to Cart</button></div>
+       
+           </figcaption>
+         </figure>
+         <figure class="fig2">
+           <div class="card3">
+                 <img class="card3-img" src="./image/maggi.jpg">
+                 <div class="offer">
+                  <p>22% <br>off</p>
+              </div>
+           </div>
+           <figcaption class="figcapt">
+            <div class="figcap-title">
+              <p style="font-weight:bold; font-size:14px; padding-left: 5px;">Maggi 2-Minute Masala Instant Noodles 560 gm</p></div>
+            <div style="margin-top: -60px;">
+                <p style="padding-left: 5px; padding-top: 44px; font-weight: bold;">&#8377; 267.00</p><br>
+            </div>
+             <div style="margin-top:-40px;">
+               <p style=" padding-left: 5px;">M.R.P: &#8377;<strike>392.00</strike>s</p>
+             </div>
+             <div style="margin-top: -20px;">
+               <p style="padding-left:8px;  color: green;" >Save; &#8377; 125.00</p>
+             </div>
+            <div style="margin-top: -15px;"><button class="btn btn-primary w-100 " onclick="AddToCart()">Add to Cart</button></div>
+       
+           </figcaption>
+          </figure>
+         <figure class="fig2">
+           <div class="card3">
+            <img class="card3-img" src="./image/mobile.jpg" style="width: 150px; margin-left: 10px;">
+            <div class="offer">
+              <p>22% <br>off</p>
+          </div>
+           </div>
+           <figcaption class="figcapt">
+            <div class="figcap-title">
+              <p style="font-weight:bold; font-size:14px; padding-left: 5px; " >Surf Excel Matic Front Load Detergent Powder</p></div>
+            <div style="margin-top: -60px;">
+                <p style="padding-left: 5px; padding-top: 44px; font-weight: bold;">&#8377; 267.00</p><br>
+            </div>
+             <div style="margin-top:-40px;">
+               <p style=" padding-left: 5px;">M.R.P: &#8377;<strike>392.00</strike>s</p>
+             </div>
+             <div style="margin-top: -20px;">
+               <p style="padding-left:8px;  color: green;" >Save; &#8377; 125.00</p>
+             </div>
+            <div style="margin-top: -15px;"><button class="btn btn-primary w-100" onclick="AddToCart()">Add to Cart</button></div>
+       
+           </figcaption>
+          </figure>
+         <figure class="fig2">
+          <div class="card3">
+            <img class="card3-img" src="./image/ghee.jpg">
+            <div class="offer">
+              <p>22% <br>off</p>
+          </div>
+          </div>
+          <figcaption class="figcapt">
+            <div class="figcap-title">
+              <p style="font-weight:bold; font-size:16px; padding-left: 5px; padding-top: -12px; " >Gowerdhan Pure Cow Ghee 1-L (jAR)</p></div>
+            <div style="margin-top: -60px;">
+                <p style="padding-left: 5px; padding-top: 44px; font-weight: bold;">&#8377; 267.00</p><br>
+            </div>
+             <div style="margin-top:-40px;">
+               <p style=" padding-left: 5px;">M.R.P: &#8377;<strike>392.00</strike>s</p>
+             </div>
+             <div style="margin-top: -20px;">
+               <p style="padding-left:8px;  color: green;" >Save; &#8377; 125.00</p>
+             </div>
+            <div style="margin-top: -18px;"><button class="btn btn-primary w-100" onclick="AddToCart()">Add to Cart</button></div>
+       
+          </figcaption>
+        </figure>
+         <figure class="fig2">
+          <div class="card3">
+            <img class="card3-img" src="./image/pears.jpg">
+            <div class="offer">
+              <p>22% <br>off</p>
+          </div>
+          </div>
+          <figcaption class="figcapt"> <div class="figcap-title">
+            <p style="font-weight:bold; font-size:16px; padding-left: 5px; padding-top: -12px;">Pears Pure & Gentle Body Wash 250 ml</p></div>
+          <div style="margin-top: -60px;">
+              <p style="padding-left: 5px; padding-top: 44px; font-weight: bold;">&#8377; 267.00</p><br>
+          </div>
+           <div style="margin-top:-40px;">
+             <p style=" padding-left: 5px;">M.R.P: &#8377;<strike>392.00</strike>s</p>
+           </div>
+           <div style="margin-top: -20px;">
+             <p style="padding-left:8px;  color: green;" >Save; &#8377; 125.00</p>
+           </div>
+          <div style="margin-top: -18px;"><button class="btn btn-primary w-100" onclick="AddToCart()">Add to Cart</button></div>
+     </figcaption>
+        </figure>
+
+      </div>
+    </section>
+    <main></main>
+    <footer>
+       <div class="top-footer">
+           <ul class="ulist">
+             <h5 class="list-heading">MOST POPULAR CATEGORIES</h5>
+             <li class="list">Staples</li>
+             <li class="list">Beverages</li>
+             <li class="list">Personal Care</li>
+             <li class="list">Home Care</li>
+             <li class="list">Fruits and Vegitables</li>
+             <li class="list">Baby Cares</li>
+             <li class="list">Snakes & Branded Foods</li>
+             <li class="list">Dairy & Bakery</li>
+           </ul>
+           <ul class="list">
+              <h5 class="list-heading">CUSTOMER SERVICES</h5>
+              <li class="list">About Us </li>
+              <li class="list">FAQ</li>
+              <li class="list">Terms and Conditions</li>
+              <li class="list">Privacy Policy</li>
+              <li class="list">E-waste Policy</li>
+              <li class="list">Canceliation and Return Policy</li>
+           </ul>
+           <ul class="list" style="margin-left: 45px; border-left: 1px solid gray;">
+              <h5 class="list-heading">CONTACT US</h5>
+              <li class="list">WhatsApp Us : <font color="blue">7003 7003</font></li><br>
+              <li class="list">Call Us : <font color="blue">1800-23487-984310</font><br>8:00AM to 8:00 PM 365 days</li><br>
+              <li class="list">Please note that you are accessing the <br>BETA Version of <font color="blue">jiomart.com</font></li><br>
+              <li class="list">Should you encounter any bugs, glitches,<br>
+                  lack of functionality, delayed deliveries, billing errors<br>
+                  or other problems on the beta website, please<br>
+                  email us on <font color="blue">cs@jiomart.com</font>
+              </li><br>
+              <!--div style="background-color: blue; margin-top: 28px;">
+                 <p>DOWNLOAD APP</p>
+                 <img src="./image/google-pay-img.JPG">
+              </div-->
+              <h5 class="list-heading">DOWNLOAD APP</h5><br>
+              <li class="list"> 
+                   <img src="./image/google-pay-img.JPG">
+              </li>
+          </ul>
+       </div>
+       <div class="bottom-footer">
+        <div style="margin-left: 150px;"><p>Best viewed on Microsoft Edge 81+, Mozilla Firefox 75+, Safari 5.1.5+, Google Chrome 80+</p></div>
+        <div style="margin-left: 80px;"><p>© 2022 All rights reserved. Reliance Retail Ltd.</p></div>
+      </div>
+    </footer>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>

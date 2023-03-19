@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        .header-top
+        {
+            width: 100%;
+            height: 80px;
+            z-index: 2;
+            background-color: aquamarine;
+        }
+        .header-top h1
+        {
+            float: left;
+            color: red;
+            font-size: 70px;
+        }
+        .header-top select
+        {
+            float: right;
+        }
+        .header-banner
+        {
+            z-index: 1;
+            width: 100%;
+            height: 800px;
+            margin-top: -50px;
+        }
+        
+        
+        section
+        {
+            background-color: black;
+        }
+        .row1
+        {
+            border-top: 12px solid rgb(90, 89,89);
+            border-bottom: 12px solid rgb(90, 89, 89);
+            height: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .banner1
+        {
+            float: right;
+            margin: 80px 150px 100px 200px;
+        }
+        .banner1-title
+        {
+            
+            width: 700px;
+            font-size: 15px;
+            margin: 180px 200px 100px 300px;
+            font-size: 30px;
+            color: white;
+        }
+        .row2
+        {
+            border-top: 1px solid rgb(90, 89,89);
+            border-bottom: 12px solid rgb(90, 89, 89);
+            height:500px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .banner2
+        {
+          float: left;
+          margin: 80px 200px 200px 220px;
+        }
+        .banner2-title        
+        {
+            width: 750px;
+            font-size: 15px;
+            margin: 150px 5px 100px 700px;
+            font-size: 30px;
+            color: white;
+        }
+        .row5
+        {
+            border-bottom: 12px solid rgb(90, 89, 89);
+            height: 900px;
+ 
+        }
+        .title
+        {
+            color: white;
+            background-color: blueviolet;
+            
+        }
+       .title h1
+        {
+            font-size: 50px;
+        }
+        .topic
+        {
+            padding-top: 5px;
+            color: white;
+            font-size: 30px;
+        }
+        ol
+        {
+            margin-top: 80px;
+        }
+        li
+        {
+            list-style: none;
+            justify-content: space-between;
+            background-color: gray;
+            margin-bottom: 20px;
+            margin-left: 400px;
+            font-size: 25px;
+            height: 60px;
+            width: 60%;
+            padding: 10px 0px 5px 8px;
+        }
+        .bi
+        {
+            float: right;
+            color: white;
+        }
+         
+        .subtitle
+        {
+          margin-top: 10px;
+          border-color: aquamarine;
+          height: 200px;
+        }
+        .subtitle p
+        {
+            text-align: center;
+            padding: 80px 0px 0px 50px;
+            color: white;
+            font-size: 28px;
+        } 
+        
+        .text-input
+        {
+            align-content: center;
+            margin: -60px 0px 0px 500px;
+            display: flex;
+        }
+        footer
+        {
+          background-color: black;
+          color: white;
+        }
+        .top-footer a
+        {
+          
+            text-decoration: none;
+            color: grey;
+        }
+        a:hover
+        {
+        text-decoration: underline;
+        }
+        .top-footer h5
+        {
+         /* margin-left: 280px;
+          padding-top: 80px;*/
+          padding: 80px 0px 30px 280px;
+          color: grey;
+        }
+        .footer-mid
+        {
+            display: flex;
+            /*background-color:brown;*/
+        }
+       .footer-list
+        {
+            margin-left: -150px;
+            color: grey;
+            padding-top: 20px;
+        }
+      .list
+      {
+        font-size: 18px;
+        background-color: black;
+        margin-bottom: 12px;
+        justify-content: space-between;
+        
+      }
+      
+
+ </style>
+</head>
+<body>
+    <header>
+      <div class="header-top">
+        <h1>NETFLIX</h1>
+          <select>
+            <option>ENG</option>
+            <option>हिन्दी</option>
+          </select>
+          <button class="btn btn-danger float-end">SignIn</button>
+      </div>
+      <div class="header-banner">
+        <img class="header-img" src="../public/images/netflix.jpg" height="790" width="100%">
+      </div>
+    </header>
+    <section>
+         <div class="row1">
+            <img class="banner1" src="../public/images/netflixlaptop.JPG"  height="350" width="430">
+            <div class="banner1-title">
+                <h1>Enjoy on Your TV.</h1>
+                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.S</p>
+            </div>
+        </div>
+        <div class="row2">
+           <img class="banner2" src="../public/images/netflixmobile.JPG" height="350px" width="430px">
+           <div class="banner2-title">
+                <h1>Download your shows to watch offline.</h1>
+                <p>Save your favourites easily and always have something to watch.</p>
+           </div>
+        </div>
+        <div class="row1">
+            <img class="banner1" src="../public/images/netflix-desktop-tablet.JPG"  height="350" width="430">
+            <div class="banner1-title">
+                <h1>Watch everywhere.</h1>
+                <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+        </div>
+        
+        <div class="row2">
+            <img class="banner2" src="../public/images/netflix-children.JPG" height="350px" width="400px">
+            <div class="banner2-title">
+                 <h1>Create profiles for children.</h1>
+                 <p>Send children on adventures with their 
+                    favourite characters in a space made just for them—free with your membership.</p>
+            </div>
+         </div>
+         
+         <div class="row5">
+            <div class="title">
+               <h1>Frequently Asked Question</h1></div>
+               <div>
+               <ol>
+                 <li><span class="topic">What is Netflix?</span><span class="bi bi-plus"></span></li>
+                 <li><span class="topic">How much does Netflix cost?</span><span class="bi bi-plus"></span></li>
+                 <li><span class="topic">Where can I watch?</span><span class="bi bi-plus"></span></li>
+                 <li><span class="topic">How do I cancel?</span><span class="bi bi-plus"></span></li>
+                 <li><span class="topic">What can I watch on Netflix?</span><span class="bi bi-plus"></span></li>
+                 <li><span class="topic">Is Netflix good for child?</span><span class="bi bi-plus"></span></li>
+               </ol>
+            </div>
+            <div class="subtitle"><p>Ready to watch? Enter your email to create or restart your membership.</p></div>
+            <div class="text-input">
+                <input type="text" class="form-control w-50 " required placeholder="Email address">
+                <button class="btn btn-danger">Get Started ></button>
+            </div>
+         </div>
+         </section>
+    <footer>
+        <div class="top-footer">
+            <h5>Questions? Call <a href="#">000-800-040-1843</a></h4>
+        </div>       
+         <div class="footer-mid">
+            <ul class="footer-list">
+                <li class="list">FAQ</li>
+                <li class="list">Investor Relations</li>
+                <li class="list">Privacy</li>
+                <li class="list">Speed Test</li>
+            </ul>
+            <ul class="footer-list">
+                <li class="list">Help Center</li>
+                <li class="list">Jobs</li>
+                <li class="list">Cookie Preference</li>
+                <li class="list">Legal Notice</li>
+            </ul>
+            <ul class="footer-list">
+                <li class="list">Account</li>
+                <li class="list">Way to watch</li>
+                <li class="list">Corporate Industries</li>
+                <li class="list">Only on Netflix</li>
+            </ul>
+            <ul class="footer-list">
+                <li class="list">Media Center</li>
+                <li class="list">Terms of Use</li>
+                <li class="list">Contact Us</li>
+            </ul>
+        </div>
+        
+    </footer>
+</body>
+</html>

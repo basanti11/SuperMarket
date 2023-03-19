@@ -1,0 +1,14 @@
+<script>
+    var Id=Symbol();
+    var tv={
+        [Id]:1,
+        Name:"Samsung TV",
+        Price:65328.34,
+        Stock:true
+    }
+    for(var property in tv)
+    {
+        document.write(`${property}:${tv[property]}<br>`);
+    }
+    document.write("Product Id=" + tv[Id]);
+</script>

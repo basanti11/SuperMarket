@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Create Account</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+      body
+      {
+        justify-content: center;
+        align-items: center;
+
+      }
+      
+      img{
+        margin-left: 48%;
+        
+       }
+      form
+      {
+        
+            margin-left: 37%;
+            padding: 20px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            width: 600px;
+            height: 800px;
+      }
+    </style>
+</head>
+<body>
+    <img src="./node_modules/Image/amazon-logo.JPG" >
+    <form>
+        <h1>Create Account</h1>
+        <div class="mb-3">
+            <label for="Name" class="form-label"><b>Your name</b></label>
+        
+              <div>
+                     <input type="text" class="form-control" name="Name" required placeholder="First and Last Name"> 
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="Mobile" class="form-label"><b>Your name</b></label>  
+              <div>
+                     <select>
+                        <option>IN +91</option>
+                        <option>Iran +98</option>
+                        <option>Italy +39</option>
+                        <option>Japan +81</option>
+                    </select><input type="text" class="form-control" name="Mobile" required placeholder="Mobile Number">
+
+                     <span>  
+                     </span><input type="text" class="form-control" name="Mobile" required placeholder="Mobile Number">  
+              </div>
+        </div>
+        <div class="mb-3">
+            <label for="Email" class="form-label"><b>Email (Optional)</b></label>
+        
+              <div>
+                     <input type="text" class="form-control" name="Email"> 
+              </div>
+        </div>
+        
+        <div class="mb-3">
+            <label for="Password" class="form-label"><b>Password</b></label>
+        
+              <div>
+                     <input type="text" class="form-control" name="Password"> 
+              </div>
+        </div>
+        <div class="mb-3">
+            <p>Passwords must be at least 6 characters.
+            </p>
+
+            <p>By enrolling your mobile phone number, you consent to receive automated security notifications via text message from Amazon. Message and data rates may apply.
+            </p>
+        </div>
+        <div class="mb-3">
+          <button class="btn btn-warning w-100">Continue</button>
+        </div>
+    </form>
+</body>
+</html>
